@@ -1,15 +1,15 @@
 {
 	"name": "svelte-flag-icons",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Flag icon components for Sveltejs",
-  "author": {
-    "name": "Shinichi Okada",
-    "email": "connect@codewithshin.com",
-    "url": "https://blog.codewithshin.com"
-  },
-  "bugs": "https://github.com/shinokada/svelte-flag-icons/issues",
-  "homepage": "https://github.com/shinokada/svelte-flag-icons",
-  "license": "MIT",
+	"author": {
+		"name": "Shinichi Okada",
+		"email": "connect@codewithshin.com",
+		"url": "https://blog.codewithshin.com"
+	},
+	"bugs": "https://github.com/shinokada/svelte-flag-icons/issues",
+	"homepage": "https://github.com/shinokada/svelte-flag-icons",
+	"license": "MIT",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -34,15 +34,15 @@
 		"typescript": "~4.6.2"
 	},
 	"type": "module",
-  "keywords": [
-    "svelte",
-    "sveltekit",
-    "country flag icons",
-    "icons",
-    "svg"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shinokada/svelte-flag-icons"
-  }
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"country flag icons",
+		"icons",
+		"svg"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shinokada/svelte-flag-icons"
+	}
 }
