@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://raw.githubusercontent.com/shinokada/svelte-flag-icons/main/static/images/flag-all.png" />
+</p>
+
 # Svelte-flags
 
 [![npm version](https://badgen.net/npm/v/svelte-flag-icons)](https://www.npmjs.com/package/svelte-flag-icons)
