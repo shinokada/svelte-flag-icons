@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/shinokada/svelte-flag-icons/main/static/images/flag-all.png" />
 </p>
 
-# Svelte-flags
+# Svelte-Flag-Icons
 
 [![npm version](https://badgen.net/npm/v/svelte-flag-icons)](https://www.npmjs.com/package/svelte-flag-icons)
 [![license](https://badgen.net/npm/license/svelte-flag-icons)](https://github.com/shinokada/svelte-flag-icons/blob/main/LICENSE)
@@ -16,7 +16,7 @@
 [Demo 1](https://svelte.dev/repl/754f6d9e949441978f1073b68437129f?version=3.48.0)
 
 
-## Svlete Icon Names
+## Icon Names
 
 [Icon list](https://github.com/shinokada/svelte-flag-icons/blob/main/icon-list.md)
 
@@ -36,7 +36,7 @@ Use the `size` prop to change the flag sizes.
 
 ```html
 <script>
-	import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from 'svelte-flags';
+	import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from 'svelte-flag-icons';
 </script>
 
 <div>
@@ -127,6 +127,8 @@ You can pass other attibutes as well.
 ## Import all
 
 Use `import * as Icon from 'svelte-flag-icons`.
+
+[REPL](https://svelte.dev/repl/754f6d9e949441978f1073b68437129f?version=3.48.0)
 
 ```html
 <script>
