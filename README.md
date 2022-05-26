@@ -76,11 +76,11 @@ Bootstrap example:
 
 ## aria-label
 
-All icons have aria-label. For example `AccessPointOff` has `aria-label="access point off"`.
+All icons have aria-label. For example `Us` has `aria-label="flag of us"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<AccessPointOff ariaLabel="Access off"></AccessPointOff>
+<Us ariaLabel="United States of America" />
 ```
 
 ## Passing down other attributes
@@ -88,59 +88,53 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 You can pass other attibutes as well.
 
 ```html
-<AccessPointOff tabindex="0"></AccessPointOff>
+<Us tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
 <script>
-	import { ChatPlus } from 'svelte-materialdesign-icons';
-	const props = {
-		size: '50',
-		color: '#ff0000'
-	};
+	import { Ca } from 'svelte-flag-icons';
 </script>
 
-<svelte:component this="{ChatPlus}" />
+<svelte:component this="{Ca}" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-	import { ChatPlus } from 'svelte-materialdesign-icons';
+	import { ChatPlus } from 'svelte-flag-icons';
 	import { onMount } from 'svelte';
+	const props = {
+		size: '50',
+		color: '#ff0000'
+	};
 	onMount(() => {
-		const icon = new ChatPlus({ target: document.body, props });
+		const icon = new Us({ target: document.body, props });
 	});
 </script>
 ```
 
 ## Import all
 
-[REPL](https://svelte.dev/repl/c0045886b264408fba13f1de70c42932?version=3.48.0)
-
-Use `import * as Icon from 'svelte-materialdesign-icons`.
+Use `import * as Icon from 'svelte-flag-icons`.
 
 ```html
 <script>
-	import * as Icon from 'svelte-materialdesign-icons';
+	import * as Icon from 'svelte-flag-icons';
 </script>
-
-<Icon.Bucket />
-<Icon.Card />
-
 <h1>Size</h1>
-<Icon.Bucket size="30" />
-<Icon.Card size="40" />
+<Icon.Fr size="30" />
+<Icon.De size="40" />
 
 <h1>CSS HEX color</h1>
-<Icon.Bucket color="#c61515" size="40" />
+<Icon.Dk color="#c61515" size="40" />
 
 <h1>Tailwind CSS</h1>
-<Icon.Bucket class="text-blue-500" />
-<Icon.Card class="text-pink-700" />
+<Icon.Jp class="text-blue-500" />
+<Icon.No class="text-pink-700" />
 ```
 
 ## Credit
