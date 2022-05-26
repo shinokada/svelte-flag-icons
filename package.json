@@ -1,0 +1,48 @@
+{
+	"name": "svelte-flag-icons",
+	"version": "0.0.1",
+	"description": "Flag icon components for Sveltejs",
+  "author": {
+    "name": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com"
+  },
+  "bugs": "https://github.com/shinokada/svelte-flag-icons/issues",
+  "homepage": "https://github.com/shinokada/svelte-flag-icons",
+  "license": "MIT",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"prepare": "svelte-kit sync",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check --plugin-search-dir=. .",
+		"format": "prettier --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"prettier": "^2.5.1",
+		"prettier-plugin-svelte": "^2.5.0",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.2.6",
+		"svelte-preprocess": "^4.10.1",
+		"svelte2tsx": "^0.5.10",
+		"tslib": "^2.3.1",
+		"typescript": "~4.6.2"
+	},
+	"type": "module",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "country flag icons",
+    "icons",
+    "svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinokada/svelte-flag-icons"
+  }
+}
