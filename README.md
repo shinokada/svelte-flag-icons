@@ -7,9 +7,6 @@
 - [Flag-icons](https://github.com/lipis/flag-icons)
 - CSS frameworks support
 
-
-
-
 ## Installation
 
 ```sh
@@ -20,22 +17,21 @@ npm i -D svelte-flag-icons
 
 Use the `size` prop to change the flag sizes.
 
-
 ```html
 <script>
-  import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from "svelte-flags";
+	import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from 'svelte-flags';
 </script>
 
 <div>
-  <Us size="200" />
-  <Ca size="200" />
-  <Fr size="200" />
-  <De size="200" />
-  <Dk size="200" />
-  <Jp size="200" />
-  <No size="200" />
-  <Ch size="200" />
-  <Cz size="200" />
+	<Us size="200" />
+	<Ca size="200" />
+	<Fr size="200" />
+	<De size="200" />
+	<Dk size="200" />
+	<Jp size="200" />
+	<No size="200" />
+	<Ch size="200" />
+	<Cz size="200" />
 </div>
 ```
 
@@ -44,8 +40,6 @@ Use the `size` prop to change the flag sizes.
 <p align="center">
 <img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag2.png" />
 </p>
-
-
 
 You can change size and other CSS using the `class` prop.
 
@@ -61,7 +55,7 @@ Or you can use `size` and `class` props together.
 Tailwind CSS
 <Us class="rounded-full bg-white h-40 w-40 ring-2 ring-gray-300 m-4" />
 Tailwind CSS + Size
-<Ca class="rounded-full bg-white ring-2 ring-gray-300 m-4" size="150"/>
+<Ca class="rounded-full bg-white ring-2 ring-gray-300 m-4" size="150" />
 Tailwind CSS + size null
 <Fr class="rounded-full bg-white w-40 ring-2 ring-gray-300 m-4" size="150" />
 ```
@@ -80,14 +74,13 @@ Bootstrap example:
 
 [ISO 3166 Country Codes](https://github.com/shinokada/svelte-flag-icons/blob/main/iso-3166-country-codes.md)
 
-
 ## aria-label
 
 All icons have aria-label. For example `AccessPointOff` has `aria-label="access point off"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<AccessPointOff ariaLabel="Access off">
+<AccessPointOff ariaLabel="Access off"></AccessPointOff>
 ```
 
 ## Passing down other attributes
@@ -95,7 +88,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 You can pass other attibutes as well.
 
 ```html
-<AccessPointOff tabindex="0">
+<AccessPointOff tabindex="0"></AccessPointOff>
 ```
 
 ## Using svelte:component
@@ -109,14 +102,14 @@ You can pass other attibutes as well.
 	};
 </script>
 
-<svelte:component this={ChatPlus} />
+<svelte:component this="{ChatPlus}" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { ChatPlus } from 'svelte-materialdesign-icons';
+	import { ChatPlus } from 'svelte-materialdesign-icons';
 	import { onMount } from 'svelte';
 	onMount(() => {
 		const icon = new ChatPlus({ target: document.body, props });
@@ -153,7 +146,6 @@ Use `import * as Icon from 'svelte-materialdesign-icons`.
 ## Credit
 
 All the credits goes to [flag-icons](https://github.com/lipis/flag-icons)
-
 
 ## Other icons
 
