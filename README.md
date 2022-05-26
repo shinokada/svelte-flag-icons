@@ -11,6 +11,19 @@
 - [Flag-icons](https://github.com/lipis/flag-icons)
 - CSS frameworks support
 
+## REPL
+
+[Demo 1](https://svelte.dev/repl/754f6d9e949441978f1073b68437129f?version=3.48.0)
+
+
+## Svlete Icon Names
+
+[Icon list](https://github.com/shinokada/svelte-flag-icons/blob/main/icon-list.md)
+
+## ISO 3166 Country Codes
+
+[ISO 3166 Country Codes](https://github.com/shinokada/svelte-flag-icons/blob/main/iso-3166-country-codes.md)
+
 ## Installation
 
 ```sh
@@ -50,18 +63,16 @@ You can change size and other CSS using the `class` prop.
 Tailwind CSS example:
 
 ```html
-<Us class="rounded-full bg-white h-40 w-40 ring-2 rring-gray-300 m-4" />
+<Us class="rounded-full bg-white h-40 w-40 ring-2 ring-gray-300 m-4" />
 ```
 
 Or you can use `size` and `class` props together.
 
 ```html
-Tailwind CSS
+# Tailwind CSS
 <Us class="rounded-full bg-white h-40 w-40 ring-2 ring-gray-300 m-4" />
-Tailwind CSS + Size
+# Tailwind CSS + Size
 <Ca class="rounded-full bg-white ring-2 ring-gray-300 m-4" size="150" />
-Tailwind CSS + size null
-<Fr class="rounded-full bg-white w-40 ring-2 ring-gray-300 m-4" size="150" />
 ```
 
 Bootstrap example:
@@ -69,14 +80,6 @@ Bootstrap example:
 ```html
 <Us class="position-absolute top-0 px-1" />
 ```
-
-## Svlete Icon Names
-
-[Icon list](https://github.com/shinokada/svelte-flag-icons/blob/main/icon-list.md)
-
-## ISO 3166 Country Codes
-
-[ISO 3166 Country Codes](https://github.com/shinokada/svelte-flag-icons/blob/main/iso-3166-country-codes.md)
 
 ## aria-label
 
