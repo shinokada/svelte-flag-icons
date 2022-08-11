@@ -266,4 +266,3 @@
 - Za.svelte
 - Zm.svelte
 - Zw.svelte
-- index.js
