@@ -1,15 +1,27 @@
+<h1 align="center">Svelte-Flag-Icons</h1>
+
+<p align="center">
+<a href="https://shinokada.github.io/svelte-flag-icons/">Svelte-Flag-Icons</a>
+</p>
+
+<p align="center">
+<a href="https://www.npmjs.com/package/svelte-flag-icons" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-flag-icons" alt="npm"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
+<a href="http://www.apache.org/licenses/" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-flag-icons" alt="License"></a>
+<a href="https://www.npmjs.com/package/svelte-flag-icons" rel="nofollow"><img src="https://img.shields.io/npm/dw/svelte-flag-icons.svg" alt="npm"></a>
+</p>
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/shinokada/svelte-flag-icons/main/static/images/flag-all.png" />
 </p>
 
-# Svelte-Flag-Icons
+260+ [Flag-icons](https://github.com/lipis/flag-icons) for Svelte. 
 
-[![npm version](https://badgen.net/npm/v/svelte-flag-icons)](https://www.npmjs.com/package/svelte-flag-icons)
-[![license](https://badgen.net/npm/license/svelte-flag-icons)](https://github.com/shinokada/svelte-flag-icons/blob/main/LICENSE)
-[![downloads](https://badgen.net/npm/dm/svelte-flag-icons)](https://github.com/shinokada/svelte-flag-icons)
+## Installation
 
-- [Flag-icons](https://github.com/lipis/flag-icons)
-- CSS frameworks support
+```sh
+npm i -D svelte-flag-icons
+```
 
 ## REPL
 
@@ -18,17 +30,11 @@
 
 ## Icon Names
 
-[Icon list](https://github.com/shinokada/svelte-flag-icons/blob/main/icon-list.md)
+[Icon list](https://github.com/shinokada/svelte-flag-icons/blob/main/docs/icon-list.md)
 
 ## ISO 3166 Country Codes
 
 [ISO 3166 Country Codes](https://github.com/shinokada/svelte-flag-icons/blob/main/iso-3166-country-codes.md)
-
-## Installation
-
-```sh
-npm i -D svelte-flag-icons
-```
 
 ## Size
 
