@@ -7,7 +7,7 @@
 <p align="center">
 <a href="https://www.npmjs.com/package/svelte-flag-icons" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-flag-icons" alt="npm"></a>
 <a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
-<a href="http://www.apache.org/licenses/" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-flag-icons" alt="License"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-flag-icons" alt="License"></a>
 <a href="https://www.npmjs.com/package/svelte-flag-icons" rel="nofollow"><img src="https://img.shields.io/npm/dw/svelte-flag-icons.svg" alt="npm"></a>
 </p>
 
