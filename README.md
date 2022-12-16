@@ -25,12 +25,12 @@ npm i -D svelte-flag-icons
 
 ## REPL
 
-[Demo 1](https://svelte.dev/repl/754f6d9e949441978f1073b68437129f?version=3.48.0)
+[Demo 1](https://svelte.dev/repl/754f6d9e949441978f1073b68437129f)
 
 
 ## Icon Names
 
-[Icon list](https://github.com/shinokada/svelte-flag-icons/blob/main/docs/icon-list.md)
+[Icon list](https://github.com/shinokada/svelte-flag-icons/blob/main/icon-list.md)
 
 ## ISO 3166 Country Codes
 
