@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.4...v0.1.5) (2022-12-16)
+
+
+### Bug Fixes
+
+* move files from docs to root since npmjs does not show README. Update sveltekit ([f8ffee1](https://github.com/shinokada/svelte-flag-icons/commit/f8ffee1780d9b5e5fc347cc320c46514412caf43))
+
 ### [0.1.4](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.3...v0.1.4) (2022-12-15)
 
 

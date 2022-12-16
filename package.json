@@ -1,6 +1,6 @@
 {
 	"name": "svelte-flag-icons",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "Flag icon components for Sveltejs",
 	"author": {
 		"name": "Shinichi Okada",
