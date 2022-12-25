@@ -1,7 +1,7 @@
 <h1 align="center">Svelte-Flag-Icons</h1>
 
 <p align="center">
-<a href="https://shinokada.github.io/svelte-flag-icons/">Svelte-Flag-Icons</a>
+<a href="https://svelte-flag-icons.codewithshin.com/">Svelte-Flag-Icons</a>
 </p>
 
 <p align="center">
