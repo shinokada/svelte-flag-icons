@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.5...v0.1.6) (2022-12-25)
+
+
+### Bug Fixes
+
+* url updates ([d62460b](https://github.com/shinokada/svelte-flag-icons/commit/d62460b55a7a58363dd451c78a1a3ed9afaac614))
+
 ### [0.1.5](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.4...v0.1.5) (2022-12-16)
 
 
