@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.6...v0.1.7) (2023-01-30)
+
+
+### Features
+
+* add pwa ([c458366](https://github.com/shinokada/svelte-flag-icons/commit/c45836668cc281c47a2408c4dcbc9e3999b4cd91))
+
 ### [0.1.6](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.5...v0.1.6) (2022-12-25)
 
 
