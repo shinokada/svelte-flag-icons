@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/shinokada/svelte-flag-icons/main/static/images/flag-all.png" />
+<img src="/static/images/flag-icons-optimized.png" width="650" />
 </p>
 
 260+ [Flag-icons](https://github.com/lipis/flag-icons) for Svelte. 
@@ -35,7 +35,7 @@ npm i -D svelte-flag-icons
 
 ## ISO 3166 Country Codes
 
-[ISO 3166 Country Codes](https://github.com/shinokada/svelte-flag-icons/blob/main/iso-3166-country-codes.md)
+[ISO 3166 Country Codes](/iso-3166-country-codes.md)
 
 ## Size
 
@@ -60,10 +60,6 @@ Use the `size` prop to change the flag sizes.
 ```
 
 ## CSS frameworks support
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/shinokada/svelte-flags/main/static/images/flag2.png" />
-</p>
 
 You can change size and other CSS using the `class` prop.
 
@@ -161,7 +157,8 @@ All the credits goes to [flag-icons](https://github.com/lipis/flag-icons)
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
 
-## Experience lightning-fast browsing and offline access with Our PWA
+## PWA: Fast & Offline
 
 This website can be downloaded and installed on your device for offline access as a Progressive Web App.
+
 To install a PWA, look for the "Add to Home Screen" option in the browser's menu or settings. On most mobile devices, this option can be found by visiting the website, then selecting the "Options" or "Menu" button in the browser, and looking for the "Add to Home Screen" option. On some desktop browsers, right-click on the page and select "Install".
