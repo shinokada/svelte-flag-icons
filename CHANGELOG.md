@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.8...v0.1.9) (2023-02-01)
+
+
+### Bug Fixes
+
+* badges target, height, and add links to crossOriginLinks ([cc7eede](https://github.com/shinokada/svelte-flag-icons/commit/cc7eedea51540f88c53208157355cfed7ca3244a))
+
 ### [0.1.8](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.7...v0.1.8) (2023-02-01)
 
 
