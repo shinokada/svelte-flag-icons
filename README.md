@@ -113,6 +113,35 @@ You can pass other attibutes as well.
 <svelte:component this="{Ca}" />
 ```
 
+## Rendering Dynamically
+
+[REPL](https://svelte.dev/repl/e986f22713d34ec2b5e8fdd98301f936?version=3.55.1)
+
+```html
+<script>
+    import * as Flag from "svelte-flag-icons";
+	const users =[
+		{
+			name: 'John',
+			country: 'Ca'
+		},
+		{
+			name: 'Jane',
+			country: 'Us'
+		}
+	]
+	const user ={
+		country:'Fr'
+	}
+</script>
+
+<svelte:component this={Flag[user.country]} size="20" />
+
+{#each users as user}
+  <svelte:component this={Flag[user.country]} size="20" />
+{/each}
+```
+
 ## Using onMount
 
 ```html
