@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/shinokada/svelte-flag-icons/compare/v0.2.1...v0.3.1) (2023-02-22)
+
+
+### Features
+
+* add microsoft webmaster tools meta tag ([d7818d3](https://github.com/shinokada/svelte-flag-icons/commit/d7818d3a1431bebac0ae69c8fb2e3fc5054b9454))
+* new svelte packaging system 2 ([a943fff](https://github.com/shinokada/svelte-flag-icons/commit/a943fff3b80d8f0e0d86fb93820f70c3f1ca098f))
+
+
+### Bug Fixes
+
+* update index.html ([a990fcc](https://github.com/shinokada/svelte-flag-icons/commit/a990fcc87c9dca9aa901a51e556ce7810f7d8170))
+
 ### [0.2.1](https://github.com/shinokada/svelte-flag-icons/compare/v0.2.0...v0.2.1) (2023-02-03)
 
 ## [0.2.0](https://github.com/shinokada/svelte-flag-icons/compare/v0.1.9...v0.2.0) (2023-02-03)
