@@ -1,6 +1,6 @@
 {
   "name": "svelte-flag-icons",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Flag icon components for Sveltejs",
   "author": {
     "name": "Shinichi Okada",
@@ -23,7 +23,7 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
     "write-package-json": "node ./scripts/package-json-writer.js",
-		"add-exports": "node ./scripts/add-exports-to-package-json.js",
+    "add-exports": "node ./scripts/add-exports-to-package-json.js",
     "package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run write-package-json && npm run add-exports && npm publish"
   },
   "files": [

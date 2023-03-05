@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/shinokada/svelte-flag-icons/compare/v0.3.2...v0.4.0) (2023-03-05)
+
+
+### Features
+
+* add individual import and add a script to update package.json ([bc765e2](https://github.com/shinokada/svelte-flag-icons/commit/bc765e20a37668c31627cd64913dfc161fa656b9))
+* add script add-exports and add comments to add-exports-to-package.json.js ([d03f5e2](https://github.com/shinokada/svelte-flag-icons/commit/d03f5e29d92e9544d169de609f0bb56f85636aa6))
+
+
+### Bug Fixes
+
+* update package:publish script ([18845ab](https://github.com/shinokada/svelte-flag-icons/commit/18845ab171409a6301f8bbace883a9ca7bd5a870))
+
 ### [0.3.2](https://github.com/shinokada/svelte-flag-icons/compare/v0.3.1...v0.3.2) (2023-03-05)
 
 ### [0.3.1](https://github.com/shinokada/svelte-flag-icons/compare/v0.2.1...v0.3.1) (2023-02-22)
