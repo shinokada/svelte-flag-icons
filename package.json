@@ -23,6 +23,7 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
     "write-package-json": "node ./scripts/package-json-writer.js",
+		"add-exports": "node ./scripts/add-exports-to-package-json.js",
     "package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run write-package-json && npm publish"
   },
   "files": [
