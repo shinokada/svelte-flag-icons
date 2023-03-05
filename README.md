@@ -61,6 +61,20 @@ Use the `size` prop to change the flag sizes.
 </div>
 ```
 
+## Faster compiling
+
+For faster compilation, you can import the icon directly.
+
+```html
+<script>
+  import No from 'svelte-flag-icons/No.svelte'
+	import Us from 'svelte-flag-icons/Us.svelte'
+</script>
+
+  <No />
+	<Us />
+```
+
 ## CSS frameworks support
 
 You can change size and other CSS using the `class` prop.

@@ -1,68 +1,1142 @@
 {
-	"name": "svelte-flag-icons",
-	"version": "0.3.2",
-	"description": "Flag icon components for Sveltejs",
-	"author": {
-		"name": "Shinichi Okada",
-		"email": "connect@codewithshin.com",
-		"url": "https://blog.codewithshin.com"
-	},
-	"bugs": "https://github.com/shinokada/svelte-flag-icons/issues",
-	"homepage": "https://svelte-flag-icons.codewithshin.com",
-	"license": "MIT",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build && npm run package",
-		"preview": "vite preview",
-		"package": "svelte-kit sync && svelte-package && publint",
-		"prepublishOnly": "npm run package",
-		"test": "playwright test",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test:unit": "vitest",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write .",
-		"write-package-json": "node ./scripts/package-json-writer.js",
-		"package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run write-package-json && npm publish"
-	},
-	"files": [
-		"dist"
-	],
-	"peerDependencies": {
-		"svelte": "^3.54.0"
-	},
-	"devDependencies": {
-		"@playwright/test": "^1.31.0",
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.8.3",
-		"@sveltejs/package": "^2.0.2",
-		"@typescript-eslint/eslint-plugin": "^5.53.0",
-		"@typescript-eslint/parser": "^5.53.0",
-		"eslint": "^8.34.0",
-		"eslint-config-prettier": "^8.6.0",
-		"eslint-plugin-svelte3": "^4.0.0",
-		"prettier": "^2.8.4",
-		"prettier-plugin-svelte": "^2.9.0",
-		"publint": "^0.1.9",
-		"svelte": "^3.55.1",
-		"svelte-check": "^3.0.3",
-		"tslib": "^2.5.0",
-		"typescript": "^4.9.5",
-		"vite": "^4.1.4",
-		"vitest": "^0.25.8"
-	},
-	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"type": "module",
-	"keywords": [
-		"svelte",
-		"sveltekit",
-		"country flag icons",
-		"icons",
-		"svg"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/shinokada/svelte-flag-icons"
-	}
+  "name": "svelte-flag-icons",
+  "version": "0.3.2",
+  "description": "Flag icon components for Sveltejs",
+  "author": {
+    "name": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com"
+  },
+  "bugs": "https://github.com/shinokada/svelte-flag-icons/issues",
+  "homepage": "https://svelte-flag-icons.codewithshin.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && npm run package",
+    "preview": "vite preview",
+    "package": "svelte-kit sync && svelte-package && publint",
+    "prepublishOnly": "npm run package",
+    "test": "playwright test",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test:unit": "vitest",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write .",
+    "write-package-json": "node ./scripts/package-json-writer.js",
+    "package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run write-package-json && npm publish"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "svelte": "^3.54.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.31.0",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.8.3",
+    "@sveltejs/package": "^2.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-svelte": "^2.9.0",
+    "publint": "^0.1.9",
+    "svelte": "^3.55.1",
+    "svelte-check": "^3.0.3",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4",
+    "vitest": "^0.25.8"
+  },
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "country flag icons",
+    "icons",
+    "svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinokada/svelte-flag-icons"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    },
+    "./Ac.svelte": {
+      "types": "./dist/Ac.svelte.d.ts",
+      "svelte": "./dist/Ac.svelte"
+    },
+    "./Ad.svelte": {
+      "types": "./dist/Ad.svelte.d.ts",
+      "svelte": "./dist/Ad.svelte"
+    },
+    "./Ae.svelte": {
+      "types": "./dist/Ae.svelte.d.ts",
+      "svelte": "./dist/Ae.svelte"
+    },
+    "./Af.svelte": {
+      "types": "./dist/Af.svelte.d.ts",
+      "svelte": "./dist/Af.svelte"
+    },
+    "./Ag.svelte": {
+      "types": "./dist/Ag.svelte.d.ts",
+      "svelte": "./dist/Ag.svelte"
+    },
+    "./Ai.svelte": {
+      "types": "./dist/Ai.svelte.d.ts",
+      "svelte": "./dist/Ai.svelte"
+    },
+    "./Al.svelte": {
+      "types": "./dist/Al.svelte.d.ts",
+      "svelte": "./dist/Al.svelte"
+    },
+    "./Am.svelte": {
+      "types": "./dist/Am.svelte.d.ts",
+      "svelte": "./dist/Am.svelte"
+    },
+    "./Ao.svelte": {
+      "types": "./dist/Ao.svelte.d.ts",
+      "svelte": "./dist/Ao.svelte"
+    },
+    "./Aq.svelte": {
+      "types": "./dist/Aq.svelte.d.ts",
+      "svelte": "./dist/Aq.svelte"
+    },
+    "./Ar.svelte": {
+      "types": "./dist/Ar.svelte.d.ts",
+      "svelte": "./dist/Ar.svelte"
+    },
+    "./As.svelte": {
+      "types": "./dist/As.svelte.d.ts",
+      "svelte": "./dist/As.svelte"
+    },
+    "./At.svelte": {
+      "types": "./dist/At.svelte.d.ts",
+      "svelte": "./dist/At.svelte"
+    },
+    "./Au.svelte": {
+      "types": "./dist/Au.svelte.d.ts",
+      "svelte": "./dist/Au.svelte"
+    },
+    "./Aw.svelte": {
+      "types": "./dist/Aw.svelte.d.ts",
+      "svelte": "./dist/Aw.svelte"
+    },
+    "./Ax.svelte": {
+      "types": "./dist/Ax.svelte.d.ts",
+      "svelte": "./dist/Ax.svelte"
+    },
+    "./Az.svelte": {
+      "types": "./dist/Az.svelte.d.ts",
+      "svelte": "./dist/Az.svelte"
+    },
+    "./Ba.svelte": {
+      "types": "./dist/Ba.svelte.d.ts",
+      "svelte": "./dist/Ba.svelte"
+    },
+    "./Bb.svelte": {
+      "types": "./dist/Bb.svelte.d.ts",
+      "svelte": "./dist/Bb.svelte"
+    },
+    "./Bd.svelte": {
+      "types": "./dist/Bd.svelte.d.ts",
+      "svelte": "./dist/Bd.svelte"
+    },
+    "./Be.svelte": {
+      "types": "./dist/Be.svelte.d.ts",
+      "svelte": "./dist/Be.svelte"
+    },
+    "./Bf.svelte": {
+      "types": "./dist/Bf.svelte.d.ts",
+      "svelte": "./dist/Bf.svelte"
+    },
+    "./Bg.svelte": {
+      "types": "./dist/Bg.svelte.d.ts",
+      "svelte": "./dist/Bg.svelte"
+    },
+    "./Bh.svelte": {
+      "types": "./dist/Bh.svelte.d.ts",
+      "svelte": "./dist/Bh.svelte"
+    },
+    "./Bi.svelte": {
+      "types": "./dist/Bi.svelte.d.ts",
+      "svelte": "./dist/Bi.svelte"
+    },
+    "./Bj.svelte": {
+      "types": "./dist/Bj.svelte.d.ts",
+      "svelte": "./dist/Bj.svelte"
+    },
+    "./Bl.svelte": {
+      "types": "./dist/Bl.svelte.d.ts",
+      "svelte": "./dist/Bl.svelte"
+    },
+    "./Bm.svelte": {
+      "types": "./dist/Bm.svelte.d.ts",
+      "svelte": "./dist/Bm.svelte"
+    },
+    "./Bn.svelte": {
+      "types": "./dist/Bn.svelte.d.ts",
+      "svelte": "./dist/Bn.svelte"
+    },
+    "./Bo.svelte": {
+      "types": "./dist/Bo.svelte.d.ts",
+      "svelte": "./dist/Bo.svelte"
+    },
+    "./Bq.svelte": {
+      "types": "./dist/Bq.svelte.d.ts",
+      "svelte": "./dist/Bq.svelte"
+    },
+    "./Br.svelte": {
+      "types": "./dist/Br.svelte.d.ts",
+      "svelte": "./dist/Br.svelte"
+    },
+    "./Bs.svelte": {
+      "types": "./dist/Bs.svelte.d.ts",
+      "svelte": "./dist/Bs.svelte"
+    },
+    "./Bt.svelte": {
+      "types": "./dist/Bt.svelte.d.ts",
+      "svelte": "./dist/Bt.svelte"
+    },
+    "./Bv.svelte": {
+      "types": "./dist/Bv.svelte.d.ts",
+      "svelte": "./dist/Bv.svelte"
+    },
+    "./Bw.svelte": {
+      "types": "./dist/Bw.svelte.d.ts",
+      "svelte": "./dist/Bw.svelte"
+    },
+    "./By.svelte": {
+      "types": "./dist/By.svelte.d.ts",
+      "svelte": "./dist/By.svelte"
+    },
+    "./Bz.svelte": {
+      "types": "./dist/Bz.svelte.d.ts",
+      "svelte": "./dist/Bz.svelte"
+    },
+    "./Ca.svelte": {
+      "types": "./dist/Ca.svelte.d.ts",
+      "svelte": "./dist/Ca.svelte"
+    },
+    "./Cc.svelte": {
+      "types": "./dist/Cc.svelte.d.ts",
+      "svelte": "./dist/Cc.svelte"
+    },
+    "./Cd.svelte": {
+      "types": "./dist/Cd.svelte.d.ts",
+      "svelte": "./dist/Cd.svelte"
+    },
+    "./Cefta.svelte": {
+      "types": "./dist/Cefta.svelte.d.ts",
+      "svelte": "./dist/Cefta.svelte"
+    },
+    "./Cf.svelte": {
+      "types": "./dist/Cf.svelte.d.ts",
+      "svelte": "./dist/Cf.svelte"
+    },
+    "./Cg.svelte": {
+      "types": "./dist/Cg.svelte.d.ts",
+      "svelte": "./dist/Cg.svelte"
+    },
+    "./Ch.svelte": {
+      "types": "./dist/Ch.svelte.d.ts",
+      "svelte": "./dist/Ch.svelte"
+    },
+    "./Ci.svelte": {
+      "types": "./dist/Ci.svelte.d.ts",
+      "svelte": "./dist/Ci.svelte"
+    },
+    "./Ck.svelte": {
+      "types": "./dist/Ck.svelte.d.ts",
+      "svelte": "./dist/Ck.svelte"
+    },
+    "./Cl.svelte": {
+      "types": "./dist/Cl.svelte.d.ts",
+      "svelte": "./dist/Cl.svelte"
+    },
+    "./Cm.svelte": {
+      "types": "./dist/Cm.svelte.d.ts",
+      "svelte": "./dist/Cm.svelte"
+    },
+    "./Cn.svelte": {
+      "types": "./dist/Cn.svelte.d.ts",
+      "svelte": "./dist/Cn.svelte"
+    },
+    "./Co.svelte": {
+      "types": "./dist/Co.svelte.d.ts",
+      "svelte": "./dist/Co.svelte"
+    },
+    "./Cp.svelte": {
+      "types": "./dist/Cp.svelte.d.ts",
+      "svelte": "./dist/Cp.svelte"
+    },
+    "./Cr.svelte": {
+      "types": "./dist/Cr.svelte.d.ts",
+      "svelte": "./dist/Cr.svelte"
+    },
+    "./Cu.svelte": {
+      "types": "./dist/Cu.svelte.d.ts",
+      "svelte": "./dist/Cu.svelte"
+    },
+    "./Cv.svelte": {
+      "types": "./dist/Cv.svelte.d.ts",
+      "svelte": "./dist/Cv.svelte"
+    },
+    "./Cw.svelte": {
+      "types": "./dist/Cw.svelte.d.ts",
+      "svelte": "./dist/Cw.svelte"
+    },
+    "./Cx.svelte": {
+      "types": "./dist/Cx.svelte.d.ts",
+      "svelte": "./dist/Cx.svelte"
+    },
+    "./Cy.svelte": {
+      "types": "./dist/Cy.svelte.d.ts",
+      "svelte": "./dist/Cy.svelte"
+    },
+    "./Cz.svelte": {
+      "types": "./dist/Cz.svelte.d.ts",
+      "svelte": "./dist/Cz.svelte"
+    },
+    "./De.svelte": {
+      "types": "./dist/De.svelte.d.ts",
+      "svelte": "./dist/De.svelte"
+    },
+    "./Dg.svelte": {
+      "types": "./dist/Dg.svelte.d.ts",
+      "svelte": "./dist/Dg.svelte"
+    },
+    "./Dj.svelte": {
+      "types": "./dist/Dj.svelte.d.ts",
+      "svelte": "./dist/Dj.svelte"
+    },
+    "./Dk.svelte": {
+      "types": "./dist/Dk.svelte.d.ts",
+      "svelte": "./dist/Dk.svelte"
+    },
+    "./Dm.svelte": {
+      "types": "./dist/Dm.svelte.d.ts",
+      "svelte": "./dist/Dm.svelte"
+    },
+    "./Do.svelte": {
+      "types": "./dist/Do.svelte.d.ts",
+      "svelte": "./dist/Do.svelte"
+    },
+    "./Dz.svelte": {
+      "types": "./dist/Dz.svelte.d.ts",
+      "svelte": "./dist/Dz.svelte"
+    },
+    "./Ea.svelte": {
+      "types": "./dist/Ea.svelte.d.ts",
+      "svelte": "./dist/Ea.svelte"
+    },
+    "./Ec.svelte": {
+      "types": "./dist/Ec.svelte.d.ts",
+      "svelte": "./dist/Ec.svelte"
+    },
+    "./Ee.svelte": {
+      "types": "./dist/Ee.svelte.d.ts",
+      "svelte": "./dist/Ee.svelte"
+    },
+    "./Eg.svelte": {
+      "types": "./dist/Eg.svelte.d.ts",
+      "svelte": "./dist/Eg.svelte"
+    },
+    "./Eh.svelte": {
+      "types": "./dist/Eh.svelte.d.ts",
+      "svelte": "./dist/Eh.svelte"
+    },
+    "./Er.svelte": {
+      "types": "./dist/Er.svelte.d.ts",
+      "svelte": "./dist/Er.svelte"
+    },
+    "./Es.svelte": {
+      "types": "./dist/Es.svelte.d.ts",
+      "svelte": "./dist/Es.svelte"
+    },
+    "./EsCt.svelte": {
+      "types": "./dist/EsCt.svelte.d.ts",
+      "svelte": "./dist/EsCt.svelte"
+    },
+    "./EsGa.svelte": {
+      "types": "./dist/EsGa.svelte.d.ts",
+      "svelte": "./dist/EsGa.svelte"
+    },
+    "./EsPv.svelte": {
+      "types": "./dist/EsPv.svelte.d.ts",
+      "svelte": "./dist/EsPv.svelte"
+    },
+    "./Et.svelte": {
+      "types": "./dist/Et.svelte.d.ts",
+      "svelte": "./dist/Et.svelte"
+    },
+    "./Eu.svelte": {
+      "types": "./dist/Eu.svelte.d.ts",
+      "svelte": "./dist/Eu.svelte"
+    },
+    "./Fi.svelte": {
+      "types": "./dist/Fi.svelte.d.ts",
+      "svelte": "./dist/Fi.svelte"
+    },
+    "./Fj.svelte": {
+      "types": "./dist/Fj.svelte.d.ts",
+      "svelte": "./dist/Fj.svelte"
+    },
+    "./Fk.svelte": {
+      "types": "./dist/Fk.svelte.d.ts",
+      "svelte": "./dist/Fk.svelte"
+    },
+    "./Fm.svelte": {
+      "types": "./dist/Fm.svelte.d.ts",
+      "svelte": "./dist/Fm.svelte"
+    },
+    "./Fo.svelte": {
+      "types": "./dist/Fo.svelte.d.ts",
+      "svelte": "./dist/Fo.svelte"
+    },
+    "./Fr.svelte": {
+      "types": "./dist/Fr.svelte.d.ts",
+      "svelte": "./dist/Fr.svelte"
+    },
+    "./Ga.svelte": {
+      "types": "./dist/Ga.svelte.d.ts",
+      "svelte": "./dist/Ga.svelte"
+    },
+    "./Gb.svelte": {
+      "types": "./dist/Gb.svelte.d.ts",
+      "svelte": "./dist/Gb.svelte"
+    },
+    "./GbEng.svelte": {
+      "types": "./dist/GbEng.svelte.d.ts",
+      "svelte": "./dist/GbEng.svelte"
+    },
+    "./GbNir.svelte": {
+      "types": "./dist/GbNir.svelte.d.ts",
+      "svelte": "./dist/GbNir.svelte"
+    },
+    "./GbSct.svelte": {
+      "types": "./dist/GbSct.svelte.d.ts",
+      "svelte": "./dist/GbSct.svelte"
+    },
+    "./GbWls.svelte": {
+      "types": "./dist/GbWls.svelte.d.ts",
+      "svelte": "./dist/GbWls.svelte"
+    },
+    "./Gd.svelte": {
+      "types": "./dist/Gd.svelte.d.ts",
+      "svelte": "./dist/Gd.svelte"
+    },
+    "./Ge.svelte": {
+      "types": "./dist/Ge.svelte.d.ts",
+      "svelte": "./dist/Ge.svelte"
+    },
+    "./Gf.svelte": {
+      "types": "./dist/Gf.svelte.d.ts",
+      "svelte": "./dist/Gf.svelte"
+    },
+    "./Gg.svelte": {
+      "types": "./dist/Gg.svelte.d.ts",
+      "svelte": "./dist/Gg.svelte"
+    },
+    "./Gh.svelte": {
+      "types": "./dist/Gh.svelte.d.ts",
+      "svelte": "./dist/Gh.svelte"
+    },
+    "./Gi.svelte": {
+      "types": "./dist/Gi.svelte.d.ts",
+      "svelte": "./dist/Gi.svelte"
+    },
+    "./Gl.svelte": {
+      "types": "./dist/Gl.svelte.d.ts",
+      "svelte": "./dist/Gl.svelte"
+    },
+    "./Gm.svelte": {
+      "types": "./dist/Gm.svelte.d.ts",
+      "svelte": "./dist/Gm.svelte"
+    },
+    "./Gn.svelte": {
+      "types": "./dist/Gn.svelte.d.ts",
+      "svelte": "./dist/Gn.svelte"
+    },
+    "./Gp.svelte": {
+      "types": "./dist/Gp.svelte.d.ts",
+      "svelte": "./dist/Gp.svelte"
+    },
+    "./Gq.svelte": {
+      "types": "./dist/Gq.svelte.d.ts",
+      "svelte": "./dist/Gq.svelte"
+    },
+    "./Gr.svelte": {
+      "types": "./dist/Gr.svelte.d.ts",
+      "svelte": "./dist/Gr.svelte"
+    },
+    "./Gs.svelte": {
+      "types": "./dist/Gs.svelte.d.ts",
+      "svelte": "./dist/Gs.svelte"
+    },
+    "./Gt.svelte": {
+      "types": "./dist/Gt.svelte.d.ts",
+      "svelte": "./dist/Gt.svelte"
+    },
+    "./Gu.svelte": {
+      "types": "./dist/Gu.svelte.d.ts",
+      "svelte": "./dist/Gu.svelte"
+    },
+    "./Gw.svelte": {
+      "types": "./dist/Gw.svelte.d.ts",
+      "svelte": "./dist/Gw.svelte"
+    },
+    "./Gy.svelte": {
+      "types": "./dist/Gy.svelte.d.ts",
+      "svelte": "./dist/Gy.svelte"
+    },
+    "./Hk.svelte": {
+      "types": "./dist/Hk.svelte.d.ts",
+      "svelte": "./dist/Hk.svelte"
+    },
+    "./Hm.svelte": {
+      "types": "./dist/Hm.svelte.d.ts",
+      "svelte": "./dist/Hm.svelte"
+    },
+    "./Hn.svelte": {
+      "types": "./dist/Hn.svelte.d.ts",
+      "svelte": "./dist/Hn.svelte"
+    },
+    "./Hr.svelte": {
+      "types": "./dist/Hr.svelte.d.ts",
+      "svelte": "./dist/Hr.svelte"
+    },
+    "./Ht.svelte": {
+      "types": "./dist/Ht.svelte.d.ts",
+      "svelte": "./dist/Ht.svelte"
+    },
+    "./Hu.svelte": {
+      "types": "./dist/Hu.svelte.d.ts",
+      "svelte": "./dist/Hu.svelte"
+    },
+    "./Ic.svelte": {
+      "types": "./dist/Ic.svelte.d.ts",
+      "svelte": "./dist/Ic.svelte"
+    },
+    "./Id.svelte": {
+      "types": "./dist/Id.svelte.d.ts",
+      "svelte": "./dist/Id.svelte"
+    },
+    "./Ie.svelte": {
+      "types": "./dist/Ie.svelte.d.ts",
+      "svelte": "./dist/Ie.svelte"
+    },
+    "./Il.svelte": {
+      "types": "./dist/Il.svelte.d.ts",
+      "svelte": "./dist/Il.svelte"
+    },
+    "./Im.svelte": {
+      "types": "./dist/Im.svelte.d.ts",
+      "svelte": "./dist/Im.svelte"
+    },
+    "./In.svelte": {
+      "types": "./dist/In.svelte.d.ts",
+      "svelte": "./dist/In.svelte"
+    },
+    "./Io.svelte": {
+      "types": "./dist/Io.svelte.d.ts",
+      "svelte": "./dist/Io.svelte"
+    },
+    "./Iq.svelte": {
+      "types": "./dist/Iq.svelte.d.ts",
+      "svelte": "./dist/Iq.svelte"
+    },
+    "./Ir.svelte": {
+      "types": "./dist/Ir.svelte.d.ts",
+      "svelte": "./dist/Ir.svelte"
+    },
+    "./Is.svelte": {
+      "types": "./dist/Is.svelte.d.ts",
+      "svelte": "./dist/Is.svelte"
+    },
+    "./It.svelte": {
+      "types": "./dist/It.svelte.d.ts",
+      "svelte": "./dist/It.svelte"
+    },
+    "./Je.svelte": {
+      "types": "./dist/Je.svelte.d.ts",
+      "svelte": "./dist/Je.svelte"
+    },
+    "./Jm.svelte": {
+      "types": "./dist/Jm.svelte.d.ts",
+      "svelte": "./dist/Jm.svelte"
+    },
+    "./Jo.svelte": {
+      "types": "./dist/Jo.svelte.d.ts",
+      "svelte": "./dist/Jo.svelte"
+    },
+    "./Jp.svelte": {
+      "types": "./dist/Jp.svelte.d.ts",
+      "svelte": "./dist/Jp.svelte"
+    },
+    "./Ke.svelte": {
+      "types": "./dist/Ke.svelte.d.ts",
+      "svelte": "./dist/Ke.svelte"
+    },
+    "./Kg.svelte": {
+      "types": "./dist/Kg.svelte.d.ts",
+      "svelte": "./dist/Kg.svelte"
+    },
+    "./Kh.svelte": {
+      "types": "./dist/Kh.svelte.d.ts",
+      "svelte": "./dist/Kh.svelte"
+    },
+    "./Ki.svelte": {
+      "types": "./dist/Ki.svelte.d.ts",
+      "svelte": "./dist/Ki.svelte"
+    },
+    "./Km.svelte": {
+      "types": "./dist/Km.svelte.d.ts",
+      "svelte": "./dist/Km.svelte"
+    },
+    "./Kn.svelte": {
+      "types": "./dist/Kn.svelte.d.ts",
+      "svelte": "./dist/Kn.svelte"
+    },
+    "./Kp.svelte": {
+      "types": "./dist/Kp.svelte.d.ts",
+      "svelte": "./dist/Kp.svelte"
+    },
+    "./Kr.svelte": {
+      "types": "./dist/Kr.svelte.d.ts",
+      "svelte": "./dist/Kr.svelte"
+    },
+    "./Kw.svelte": {
+      "types": "./dist/Kw.svelte.d.ts",
+      "svelte": "./dist/Kw.svelte"
+    },
+    "./Ky.svelte": {
+      "types": "./dist/Ky.svelte.d.ts",
+      "svelte": "./dist/Ky.svelte"
+    },
+    "./Kz.svelte": {
+      "types": "./dist/Kz.svelte.d.ts",
+      "svelte": "./dist/Kz.svelte"
+    },
+    "./La.svelte": {
+      "types": "./dist/La.svelte.d.ts",
+      "svelte": "./dist/La.svelte"
+    },
+    "./Lb.svelte": {
+      "types": "./dist/Lb.svelte.d.ts",
+      "svelte": "./dist/Lb.svelte"
+    },
+    "./Lc.svelte": {
+      "types": "./dist/Lc.svelte.d.ts",
+      "svelte": "./dist/Lc.svelte"
+    },
+    "./Li.svelte": {
+      "types": "./dist/Li.svelte.d.ts",
+      "svelte": "./dist/Li.svelte"
+    },
+    "./Lk.svelte": {
+      "types": "./dist/Lk.svelte.d.ts",
+      "svelte": "./dist/Lk.svelte"
+    },
+    "./Lr.svelte": {
+      "types": "./dist/Lr.svelte.d.ts",
+      "svelte": "./dist/Lr.svelte"
+    },
+    "./Ls.svelte": {
+      "types": "./dist/Ls.svelte.d.ts",
+      "svelte": "./dist/Ls.svelte"
+    },
+    "./Lt.svelte": {
+      "types": "./dist/Lt.svelte.d.ts",
+      "svelte": "./dist/Lt.svelte"
+    },
+    "./Lu.svelte": {
+      "types": "./dist/Lu.svelte.d.ts",
+      "svelte": "./dist/Lu.svelte"
+    },
+    "./Lv.svelte": {
+      "types": "./dist/Lv.svelte.d.ts",
+      "svelte": "./dist/Lv.svelte"
+    },
+    "./Ly.svelte": {
+      "types": "./dist/Ly.svelte.d.ts",
+      "svelte": "./dist/Ly.svelte"
+    },
+    "./Ma.svelte": {
+      "types": "./dist/Ma.svelte.d.ts",
+      "svelte": "./dist/Ma.svelte"
+    },
+    "./Mc.svelte": {
+      "types": "./dist/Mc.svelte.d.ts",
+      "svelte": "./dist/Mc.svelte"
+    },
+    "./Md.svelte": {
+      "types": "./dist/Md.svelte.d.ts",
+      "svelte": "./dist/Md.svelte"
+    },
+    "./Me.svelte": {
+      "types": "./dist/Me.svelte.d.ts",
+      "svelte": "./dist/Me.svelte"
+    },
+    "./Mf.svelte": {
+      "types": "./dist/Mf.svelte.d.ts",
+      "svelte": "./dist/Mf.svelte"
+    },
+    "./Mg.svelte": {
+      "types": "./dist/Mg.svelte.d.ts",
+      "svelte": "./dist/Mg.svelte"
+    },
+    "./Mh.svelte": {
+      "types": "./dist/Mh.svelte.d.ts",
+      "svelte": "./dist/Mh.svelte"
+    },
+    "./Mk.svelte": {
+      "types": "./dist/Mk.svelte.d.ts",
+      "svelte": "./dist/Mk.svelte"
+    },
+    "./Ml.svelte": {
+      "types": "./dist/Ml.svelte.d.ts",
+      "svelte": "./dist/Ml.svelte"
+    },
+    "./Mm.svelte": {
+      "types": "./dist/Mm.svelte.d.ts",
+      "svelte": "./dist/Mm.svelte"
+    },
+    "./Mn.svelte": {
+      "types": "./dist/Mn.svelte.d.ts",
+      "svelte": "./dist/Mn.svelte"
+    },
+    "./Mo.svelte": {
+      "types": "./dist/Mo.svelte.d.ts",
+      "svelte": "./dist/Mo.svelte"
+    },
+    "./Mp.svelte": {
+      "types": "./dist/Mp.svelte.d.ts",
+      "svelte": "./dist/Mp.svelte"
+    },
+    "./Mq.svelte": {
+      "types": "./dist/Mq.svelte.d.ts",
+      "svelte": "./dist/Mq.svelte"
+    },
+    "./Mr.svelte": {
+      "types": "./dist/Mr.svelte.d.ts",
+      "svelte": "./dist/Mr.svelte"
+    },
+    "./Ms.svelte": {
+      "types": "./dist/Ms.svelte.d.ts",
+      "svelte": "./dist/Ms.svelte"
+    },
+    "./Mt.svelte": {
+      "types": "./dist/Mt.svelte.d.ts",
+      "svelte": "./dist/Mt.svelte"
+    },
+    "./Mu.svelte": {
+      "types": "./dist/Mu.svelte.d.ts",
+      "svelte": "./dist/Mu.svelte"
+    },
+    "./Mv.svelte": {
+      "types": "./dist/Mv.svelte.d.ts",
+      "svelte": "./dist/Mv.svelte"
+    },
+    "./Mw.svelte": {
+      "types": "./dist/Mw.svelte.d.ts",
+      "svelte": "./dist/Mw.svelte"
+    },
+    "./Mx.svelte": {
+      "types": "./dist/Mx.svelte.d.ts",
+      "svelte": "./dist/Mx.svelte"
+    },
+    "./My.svelte": {
+      "types": "./dist/My.svelte.d.ts",
+      "svelte": "./dist/My.svelte"
+    },
+    "./Mz.svelte": {
+      "types": "./dist/Mz.svelte.d.ts",
+      "svelte": "./dist/Mz.svelte"
+    },
+    "./Na.svelte": {
+      "types": "./dist/Na.svelte.d.ts",
+      "svelte": "./dist/Na.svelte"
+    },
+    "./Nc.svelte": {
+      "types": "./dist/Nc.svelte.d.ts",
+      "svelte": "./dist/Nc.svelte"
+    },
+    "./Ne.svelte": {
+      "types": "./dist/Ne.svelte.d.ts",
+      "svelte": "./dist/Ne.svelte"
+    },
+    "./Nf.svelte": {
+      "types": "./dist/Nf.svelte.d.ts",
+      "svelte": "./dist/Nf.svelte"
+    },
+    "./Ng.svelte": {
+      "types": "./dist/Ng.svelte.d.ts",
+      "svelte": "./dist/Ng.svelte"
+    },
+    "./Ni.svelte": {
+      "types": "./dist/Ni.svelte.d.ts",
+      "svelte": "./dist/Ni.svelte"
+    },
+    "./Nl.svelte": {
+      "types": "./dist/Nl.svelte.d.ts",
+      "svelte": "./dist/Nl.svelte"
+    },
+    "./No.svelte": {
+      "types": "./dist/No.svelte.d.ts",
+      "svelte": "./dist/No.svelte"
+    },
+    "./Np.svelte": {
+      "types": "./dist/Np.svelte.d.ts",
+      "svelte": "./dist/Np.svelte"
+    },
+    "./Nr.svelte": {
+      "types": "./dist/Nr.svelte.d.ts",
+      "svelte": "./dist/Nr.svelte"
+    },
+    "./Nu.svelte": {
+      "types": "./dist/Nu.svelte.d.ts",
+      "svelte": "./dist/Nu.svelte"
+    },
+    "./Nz.svelte": {
+      "types": "./dist/Nz.svelte.d.ts",
+      "svelte": "./dist/Nz.svelte"
+    },
+    "./Om.svelte": {
+      "types": "./dist/Om.svelte.d.ts",
+      "svelte": "./dist/Om.svelte"
+    },
+    "./Pa.svelte": {
+      "types": "./dist/Pa.svelte.d.ts",
+      "svelte": "./dist/Pa.svelte"
+    },
+    "./Pe.svelte": {
+      "types": "./dist/Pe.svelte.d.ts",
+      "svelte": "./dist/Pe.svelte"
+    },
+    "./Pf.svelte": {
+      "types": "./dist/Pf.svelte.d.ts",
+      "svelte": "./dist/Pf.svelte"
+    },
+    "./Pg.svelte": {
+      "types": "./dist/Pg.svelte.d.ts",
+      "svelte": "./dist/Pg.svelte"
+    },
+    "./Ph.svelte": {
+      "types": "./dist/Ph.svelte.d.ts",
+      "svelte": "./dist/Ph.svelte"
+    },
+    "./Pk.svelte": {
+      "types": "./dist/Pk.svelte.d.ts",
+      "svelte": "./dist/Pk.svelte"
+    },
+    "./Pl.svelte": {
+      "types": "./dist/Pl.svelte.d.ts",
+      "svelte": "./dist/Pl.svelte"
+    },
+    "./Pm.svelte": {
+      "types": "./dist/Pm.svelte.d.ts",
+      "svelte": "./dist/Pm.svelte"
+    },
+    "./Pn.svelte": {
+      "types": "./dist/Pn.svelte.d.ts",
+      "svelte": "./dist/Pn.svelte"
+    },
+    "./Pr.svelte": {
+      "types": "./dist/Pr.svelte.d.ts",
+      "svelte": "./dist/Pr.svelte"
+    },
+    "./Ps.svelte": {
+      "types": "./dist/Ps.svelte.d.ts",
+      "svelte": "./dist/Ps.svelte"
+    },
+    "./Pt.svelte": {
+      "types": "./dist/Pt.svelte.d.ts",
+      "svelte": "./dist/Pt.svelte"
+    },
+    "./Pw.svelte": {
+      "types": "./dist/Pw.svelte.d.ts",
+      "svelte": "./dist/Pw.svelte"
+    },
+    "./Py.svelte": {
+      "types": "./dist/Py.svelte.d.ts",
+      "svelte": "./dist/Py.svelte"
+    },
+    "./Qa.svelte": {
+      "types": "./dist/Qa.svelte.d.ts",
+      "svelte": "./dist/Qa.svelte"
+    },
+    "./Re.svelte": {
+      "types": "./dist/Re.svelte.d.ts",
+      "svelte": "./dist/Re.svelte"
+    },
+    "./Ro.svelte": {
+      "types": "./dist/Ro.svelte.d.ts",
+      "svelte": "./dist/Ro.svelte"
+    },
+    "./Rs.svelte": {
+      "types": "./dist/Rs.svelte.d.ts",
+      "svelte": "./dist/Rs.svelte"
+    },
+    "./Ru.svelte": {
+      "types": "./dist/Ru.svelte.d.ts",
+      "svelte": "./dist/Ru.svelte"
+    },
+    "./Rw.svelte": {
+      "types": "./dist/Rw.svelte.d.ts",
+      "svelte": "./dist/Rw.svelte"
+    },
+    "./Sa.svelte": {
+      "types": "./dist/Sa.svelte.d.ts",
+      "svelte": "./dist/Sa.svelte"
+    },
+    "./Sb.svelte": {
+      "types": "./dist/Sb.svelte.d.ts",
+      "svelte": "./dist/Sb.svelte"
+    },
+    "./Sc.svelte": {
+      "types": "./dist/Sc.svelte.d.ts",
+      "svelte": "./dist/Sc.svelte"
+    },
+    "./Sd.svelte": {
+      "types": "./dist/Sd.svelte.d.ts",
+      "svelte": "./dist/Sd.svelte"
+    },
+    "./Se.svelte": {
+      "types": "./dist/Se.svelte.d.ts",
+      "svelte": "./dist/Se.svelte"
+    },
+    "./Sg.svelte": {
+      "types": "./dist/Sg.svelte.d.ts",
+      "svelte": "./dist/Sg.svelte"
+    },
+    "./Sh.svelte": {
+      "types": "./dist/Sh.svelte.d.ts",
+      "svelte": "./dist/Sh.svelte"
+    },
+    "./Si.svelte": {
+      "types": "./dist/Si.svelte.d.ts",
+      "svelte": "./dist/Si.svelte"
+    },
+    "./Sj.svelte": {
+      "types": "./dist/Sj.svelte.d.ts",
+      "svelte": "./dist/Sj.svelte"
+    },
+    "./Sk.svelte": {
+      "types": "./dist/Sk.svelte.d.ts",
+      "svelte": "./dist/Sk.svelte"
+    },
+    "./Sl.svelte": {
+      "types": "./dist/Sl.svelte.d.ts",
+      "svelte": "./dist/Sl.svelte"
+    },
+    "./Sm.svelte": {
+      "types": "./dist/Sm.svelte.d.ts",
+      "svelte": "./dist/Sm.svelte"
+    },
+    "./Sn.svelte": {
+      "types": "./dist/Sn.svelte.d.ts",
+      "svelte": "./dist/Sn.svelte"
+    },
+    "./So.svelte": {
+      "types": "./dist/So.svelte.d.ts",
+      "svelte": "./dist/So.svelte"
+    },
+    "./Sr.svelte": {
+      "types": "./dist/Sr.svelte.d.ts",
+      "svelte": "./dist/Sr.svelte"
+    },
+    "./Ss.svelte": {
+      "types": "./dist/Ss.svelte.d.ts",
+      "svelte": "./dist/Ss.svelte"
+    },
+    "./St.svelte": {
+      "types": "./dist/St.svelte.d.ts",
+      "svelte": "./dist/St.svelte"
+    },
+    "./Sv.svelte": {
+      "types": "./dist/Sv.svelte.d.ts",
+      "svelte": "./dist/Sv.svelte"
+    },
+    "./Sx.svelte": {
+      "types": "./dist/Sx.svelte.d.ts",
+      "svelte": "./dist/Sx.svelte"
+    },
+    "./Sy.svelte": {
+      "types": "./dist/Sy.svelte.d.ts",
+      "svelte": "./dist/Sy.svelte"
+    },
+    "./Sz.svelte": {
+      "types": "./dist/Sz.svelte.d.ts",
+      "svelte": "./dist/Sz.svelte"
+    },
+    "./Ta.svelte": {
+      "types": "./dist/Ta.svelte.d.ts",
+      "svelte": "./dist/Ta.svelte"
+    },
+    "./Tc.svelte": {
+      "types": "./dist/Tc.svelte.d.ts",
+      "svelte": "./dist/Tc.svelte"
+    },
+    "./Td.svelte": {
+      "types": "./dist/Td.svelte.d.ts",
+      "svelte": "./dist/Td.svelte"
+    },
+    "./Tf.svelte": {
+      "types": "./dist/Tf.svelte.d.ts",
+      "svelte": "./dist/Tf.svelte"
+    },
+    "./Tg.svelte": {
+      "types": "./dist/Tg.svelte.d.ts",
+      "svelte": "./dist/Tg.svelte"
+    },
+    "./Th.svelte": {
+      "types": "./dist/Th.svelte.d.ts",
+      "svelte": "./dist/Th.svelte"
+    },
+    "./Tj.svelte": {
+      "types": "./dist/Tj.svelte.d.ts",
+      "svelte": "./dist/Tj.svelte"
+    },
+    "./Tk.svelte": {
+      "types": "./dist/Tk.svelte.d.ts",
+      "svelte": "./dist/Tk.svelte"
+    },
+    "./Tl.svelte": {
+      "types": "./dist/Tl.svelte.d.ts",
+      "svelte": "./dist/Tl.svelte"
+    },
+    "./Tm.svelte": {
+      "types": "./dist/Tm.svelte.d.ts",
+      "svelte": "./dist/Tm.svelte"
+    },
+    "./Tn.svelte": {
+      "types": "./dist/Tn.svelte.d.ts",
+      "svelte": "./dist/Tn.svelte"
+    },
+    "./To.svelte": {
+      "types": "./dist/To.svelte.d.ts",
+      "svelte": "./dist/To.svelte"
+    },
+    "./Tr.svelte": {
+      "types": "./dist/Tr.svelte.d.ts",
+      "svelte": "./dist/Tr.svelte"
+    },
+    "./Tt.svelte": {
+      "types": "./dist/Tt.svelte.d.ts",
+      "svelte": "./dist/Tt.svelte"
+    },
+    "./Tv.svelte": {
+      "types": "./dist/Tv.svelte.d.ts",
+      "svelte": "./dist/Tv.svelte"
+    },
+    "./Tw.svelte": {
+      "types": "./dist/Tw.svelte.d.ts",
+      "svelte": "./dist/Tw.svelte"
+    },
+    "./Tz.svelte": {
+      "types": "./dist/Tz.svelte.d.ts",
+      "svelte": "./dist/Tz.svelte"
+    },
+    "./Ua.svelte": {
+      "types": "./dist/Ua.svelte.d.ts",
+      "svelte": "./dist/Ua.svelte"
+    },
+    "./Ug.svelte": {
+      "types": "./dist/Ug.svelte.d.ts",
+      "svelte": "./dist/Ug.svelte"
+    },
+    "./Um.svelte": {
+      "types": "./dist/Um.svelte.d.ts",
+      "svelte": "./dist/Um.svelte"
+    },
+    "./Un.svelte": {
+      "types": "./dist/Un.svelte.d.ts",
+      "svelte": "./dist/Un.svelte"
+    },
+    "./Us.svelte": {
+      "types": "./dist/Us.svelte.d.ts",
+      "svelte": "./dist/Us.svelte"
+    },
+    "./Uy.svelte": {
+      "types": "./dist/Uy.svelte.d.ts",
+      "svelte": "./dist/Uy.svelte"
+    },
+    "./Uz.svelte": {
+      "types": "./dist/Uz.svelte.d.ts",
+      "svelte": "./dist/Uz.svelte"
+    },
+    "./Va.svelte": {
+      "types": "./dist/Va.svelte.d.ts",
+      "svelte": "./dist/Va.svelte"
+    },
+    "./Vc.svelte": {
+      "types": "./dist/Vc.svelte.d.ts",
+      "svelte": "./dist/Vc.svelte"
+    },
+    "./Ve.svelte": {
+      "types": "./dist/Ve.svelte.d.ts",
+      "svelte": "./dist/Ve.svelte"
+    },
+    "./Vg.svelte": {
+      "types": "./dist/Vg.svelte.d.ts",
+      "svelte": "./dist/Vg.svelte"
+    },
+    "./Vi.svelte": {
+      "types": "./dist/Vi.svelte.d.ts",
+      "svelte": "./dist/Vi.svelte"
+    },
+    "./Vn.svelte": {
+      "types": "./dist/Vn.svelte.d.ts",
+      "svelte": "./dist/Vn.svelte"
+    },
+    "./Vu.svelte": {
+      "types": "./dist/Vu.svelte.d.ts",
+      "svelte": "./dist/Vu.svelte"
+    },
+    "./Wf.svelte": {
+      "types": "./dist/Wf.svelte.d.ts",
+      "svelte": "./dist/Wf.svelte"
+    },
+    "./Ws.svelte": {
+      "types": "./dist/Ws.svelte.d.ts",
+      "svelte": "./dist/Ws.svelte"
+    },
+    "./Xk.svelte": {
+      "types": "./dist/Xk.svelte.d.ts",
+      "svelte": "./dist/Xk.svelte"
+    },
+    "./Xx.svelte": {
+      "types": "./dist/Xx.svelte.d.ts",
+      "svelte": "./dist/Xx.svelte"
+    },
+    "./Ye.svelte": {
+      "types": "./dist/Ye.svelte.d.ts",
+      "svelte": "./dist/Ye.svelte"
+    },
+    "./Yt.svelte": {
+      "types": "./dist/Yt.svelte.d.ts",
+      "svelte": "./dist/Yt.svelte"
+    },
+    "./Za.svelte": {
+      "types": "./dist/Za.svelte.d.ts",
+      "svelte": "./dist/Za.svelte"
+    },
+    "./Zm.svelte": {
+      "types": "./dist/Zm.svelte.d.ts",
+      "svelte": "./dist/Zm.svelte"
+    },
+    "./Zw.svelte": {
+      "types": "./dist/Zw.svelte.d.ts",
+      "svelte": "./dist/Zw.svelte"
+    }
+  }
 }
