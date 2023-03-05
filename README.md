@@ -45,19 +45,19 @@ Use the `size` prop to change the flag sizes.
 
 ```html
 <script>
-	import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from 'svelte-flag-icons';
+  import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from 'svelte-flag-icons';
 </script>
 
 <div>
-	<Us size="200" />
-	<Ca size="200" />
-	<Fr size="200" />
-	<De size="200" />
-	<Dk size="200" />
-	<Jp size="200" />
-	<No size="200" />
-	<Ch size="200" />
-	<Cz size="200" />
+  <Us size="200" />
+  <Ca size="200" />
+  <Fr size="200" />
+  <De size="200" />
+  <Dk size="200" />
+  <Jp size="200" />
+  <No size="200" />
+  <Ch size="200" />
+  <Cz size="200" />
 </div>
 ```
 
@@ -68,11 +68,11 @@ For faster compilation, you can import the icon directly.
 ```html
 <script>
   import No from 'svelte-flag-icons/No.svelte'
-	import Us from 'svelte-flag-icons/Us.svelte'
+  import Us from 'svelte-flag-icons/Us.svelte'
 </script>
 
   <No />
-	<Us />
+  <Us />
 ```
 
 ## CSS frameworks support
@@ -121,7 +121,7 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-	import { Ca } from 'svelte-flag-icons';
+  import { Ca } from 'svelte-flag-icons';
 </script>
 
 <svelte:component this="{Ca}" />
@@ -134,19 +134,19 @@ You can pass other attibutes as well.
 ```html
 <script>
     import * as Flag from "svelte-flag-icons";
-	const users =[
-		{
-			name: 'John',
-			country: 'Ca'
-		},
-		{
-			name: 'Jane',
-			country: 'Us'
-		}
-	]
-	const user ={
-		country:'Fr'
-	}
+  const users =[
+    {
+      name: 'John',
+      country: 'Ca'
+    },
+    {
+      name: 'Jane',
+      country: 'Us'
+    }
+  ]
+  const user ={
+    country:'Fr'
+  }
 </script>
 
 <svelte:component this={Flag[user.country]} size="20" />
@@ -160,15 +160,15 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-	import { ChatPlus } from 'svelte-flag-icons';
-	import { onMount } from 'svelte';
-	const props = {
-		size: '50',
-		color: '#ff0000'
-	};
-	onMount(() => {
-		const icon = new Us({ target: document.body, props });
-	});
+  import { ChatPlus } from 'svelte-flag-icons';
+  import { onMount } from 'svelte';
+  const props = {
+    size: '50',
+    color: '#ff0000'
+  };
+  onMount(() => {
+    const icon = new Us({ target: document.body, props });
+  });
 </script>
 ```
 
@@ -180,7 +180,7 @@ Use `import * as Icon from 'svelte-flag-icons`.
 
 ```html
 <script>
-	import * as Icon from 'svelte-flag-icons';
+  import * as Icon from 'svelte-flag-icons';
 </script>
 <h1>Size</h1>
 <Icon.Fr size="30" />
