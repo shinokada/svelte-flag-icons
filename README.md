@@ -51,6 +51,16 @@ If you are a TypeScript user, Add `"moduleResolution": "bundler"` to `tsconfig.j
 
 [ISO 3166 Country Codes](/iso-3166-country-codes.md)
 
+## Usage
+
+```html
+<script>
+  import { Us } from 'svelte-flag-icons';
+</script>
+
+<Us />
+```
+
 ## Faster compiling
 
 **This require `"typescript": "^5.0.0"`.**
