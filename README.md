@@ -26,6 +26,18 @@
 npm i -D svelte-flag-icons
 ```
 
+If you are a TypeScript user, Add `"moduleResolution": "bundler"` to `tsconfig.json`:
+
+```
+{
+	//...
+	"compilerOptions": {
+		// ...
+		"moduleResolution": "bundler"
+	}
+}
+```
+
 ## REPL
 
 [Demo 1](https://svelte.dev/repl/754f6d9e949441978f1073b68437129f)
