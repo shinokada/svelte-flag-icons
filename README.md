@@ -53,6 +53,8 @@ If you are a TypeScript user, Add `"moduleResolution": "bundler"` to `tsconfig.j
 
 ## Faster compiling
 
+**This require `"typescript": "^5.0.0"`.**
+
 For faster compilation, you can import the icon directly.
 
 ```html
