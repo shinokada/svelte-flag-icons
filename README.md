@@ -51,28 +51,6 @@ If you are a TypeScript user, Add `"moduleResolution": "bundler"` to `tsconfig.j
 
 [ISO 3166 Country Codes](/iso-3166-country-codes.md)
 
-## Size
-
-Use the `size` prop to change the flag sizes.
-
-```html
-<script>
-  import { Us, Ca, Fr, De, Dk, Jp, No, Ch, Cz } from 'svelte-flag-icons';
-</script>
-
-<div>
-  <Us size="200" />
-  <Ca size="200" />
-  <Fr size="200" />
-  <De size="200" />
-  <Dk size="200" />
-  <Jp size="200" />
-  <No size="200" />
-  <Ch size="200" />
-  <Cz size="200" />
-</div>
-```
-
 ## Faster compiling
 
 For faster compilation, you can import the icon directly.
@@ -85,6 +63,23 @@ For faster compilation, you can import the icon directly.
 
   <No />
   <Us />
+```
+
+## Size
+
+Use the `size` prop to change the flag sizes.
+
+```html
+<script>
+  import { Us, Ca, Fr, De } from 'svelte-flag-icons';
+</script>
+
+<div>
+  <Us size="200" />
+  <Ca size="200" />
+  <Fr size="200" />
+  <De size="200" />
+</div>
 ```
 
 ## CSS frameworks support
