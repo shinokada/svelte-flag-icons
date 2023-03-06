@@ -141,7 +141,7 @@ You can pass other attibutes as well.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<BadgeAr tabindex="-1" />
+<Us tabindex="-1" />
 ```
 
 ## Using svelte:component
