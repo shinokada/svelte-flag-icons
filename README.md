@@ -17,7 +17,7 @@
 260+ [Flag-icons](https://github.com/lipis/flag-icons) for Svelte. 
 
 
-Thank you for considering using my open-source package for your project. I appreciate your support and contributions towards the development of this package. If you are using this package in a commercial or profit-generating project, please consider supporting me by clicking on the following link, [https://github.com/sponsors/shinokada](https://github.com/sponsors/shinokada). Your support will help me maintain and improve the quality of this package for the benefit of the entire community.
+Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
 <p align="center">
 <img src="/static/images/flag-icons-optimized.png" width="650" />
@@ -66,7 +66,8 @@ If you are a TypeScript user, Add `"moduleResolution": "bundler"` to `tsconfig.j
 
 ## Faster compiling
 
-For faster compilation, you can import the icon directly.
+If you only need to use a couple of icons from this library in your Svelte app, importing it directly. This can help optimize compilation speed. 
+By importing only what you need, you can reduce the amount of code that needs to be processed, which can improve overall performance.
 
 ```html
 <script>
