@@ -20,6 +20,9 @@
 
 260+ [Flag-icons](https://github.com/lipis/flag-icons) for Svelte. 
 
+
+Thank you for considering using my open-source package for your project. I appreciate your support and contributions towards the development of this package. If you are using this package in a commercial or profit-generating project, please consider supporting me by clicking on the following link, [https://github.com/sponsors/shinokada](https://github.com/sponsors/shinokada). Your support will help me maintain and improve the quality of this package for the benefit of the entire community.
+
 ## Installation
 
 ```sh
@@ -63,18 +66,34 @@ If you are a TypeScript user, Add `"moduleResolution": "bundler"` to `tsconfig.j
 
 ## Faster compiling
 
-**This require `"typescript": "^5.0.0"`.**
-
 For faster compilation, you can import the icon directly.
 
 ```html
 <script>
   import No from 'svelte-flag-icons/No.svelte'
-  import Us from 'svelte-flag-icons/Us.svelte'
 </script>
 
   <No />
-  <Us />
+```
+
+If you are TypeScript user, **this require `"typescript": "^5.0.0"`.**
+
+As of March 2023, the `typescript@beta` version is now available:
+
+```sh
+pnpm i -D typescript@beta
+```
+
+To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
+
+```json
+{
+  //...
+  "compilerOptions": {
+    // ...
+    "moduleResolution": "nodenext"
+  }
+}
 ```
 
 ## Size
