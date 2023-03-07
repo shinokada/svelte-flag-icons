@@ -14,14 +14,14 @@
 <a href="https://www.npmjs.com/package/svelte-flag-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-flag-icons.svg" alt="npm" height="25"></a>
 </p>
 
-<p align="center">
-<img src="/static/images/flag-icons-optimized.png" width="650" />
-</p>
-
 260+ [Flag-icons](https://github.com/lipis/flag-icons) for Svelte. 
 
 
 Thank you for considering using my open-source package for your project. I appreciate your support and contributions towards the development of this package. If you are using this package in a commercial or profit-generating project, please consider supporting me by clicking on the following link, [https://github.com/sponsors/shinokada](https://github.com/sponsors/shinokada). Your support will help me maintain and improve the quality of this package for the benefit of the entire community.
+
+<p align="center">
+<img src="/static/images/flag-icons-optimized.png" width="650" />
+</p>
 
 ## Installation
 
