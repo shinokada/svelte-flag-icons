@@ -1,4 +1,4 @@
-<script>export let size="24";export let ariaLabel="flag of tc" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-tc" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 640 480">
+<script>export let size="24";export let ariaLabel="flag of tc" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-tc" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
   <path fill="#002868" d="M640 480V0H0v480h640z"/>
   <g fill="none" stroke="#000">
     <path fill="#fcd116" stroke-width="8" d="M590 174.6v90c0 60-30 124.6-105 159.6-75-35-105-99.6-105-159.6v-90z"/>

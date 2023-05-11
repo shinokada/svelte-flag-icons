@@ -1,4 +1,4 @@
-<script>export let size="24";export let ariaLabel="flag of mx" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-mx" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 640 480">
+<script>export let size="24";export let ariaLabel="flag of mx" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-mx" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
   <defs>
     <radialGradient xlink:href="#a" id="b" cx="842.3" cy="103.7" r="25.9" gradientTransform="matrix(.14152 .03595 -.03453 .14198 213.1 162.4)" gradientUnits="userSpaceOnUse"/>
     <radialGradient xlink:href="#a" id="c" cx="651.5" cy="550.5" r="25.9" gradientTransform="matrix(-.13441 -.05384 .04964 -.12489 397.9 -24.3)" gradientUnits="userSpaceOnUse"/>

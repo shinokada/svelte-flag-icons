@@ -1,4 +1,4 @@
-<script>export let size="24";export let ariaLabel="flag of fk" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-fk" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 640 480">
+<script>export let size="24";export let ariaLabel="flag of fk" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-fk" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
   <defs>
     <linearGradient xlink:href="#a" id="c" x1="444.4" x2="470.9" y1="592.2" y2="577.1" gradientTransform="matrix(-1.08448 0 0 1.26674 909.5 -414.7)" gradientUnits="userSpaceOnUse"/>
     <linearGradient xlink:href="#a" id="g" x1="851.8" x2="646.2" y1="369.9" y2="369.9" gradientTransform="matrix(.85733 0 0 .9624 -161.5 .3)" gradientUnits="userSpaceOnUse"/>

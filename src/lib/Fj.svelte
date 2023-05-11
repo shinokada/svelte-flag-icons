@@ -1,4 +1,4 @@
-<script>export let size="24";export let ariaLabel="flag of fj" </script><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-fj" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 640 480">
+<script>export let size="24";export let ariaLabel="flag of fj" </script><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-fj" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
   <path fill="#68bfe5" d="M0 0v480h640V0H0z"/>
   <g stroke-miterlimit="4.8">
     <path fill="#fff" d="M420.9 193.2v136.4c0 44.6 80.6 71 80.6 71s80.5-26.4 80.5-71V193.2z"/>

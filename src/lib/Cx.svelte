@@ -1,4 +1,4 @@
-<script>export let size="24";export let ariaLabel="flag of cx" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-cx" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 640 480">
+<script>export let size="24";export let ariaLabel="flag of cx" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-cx" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
   <path fill="#0021ad" d="M0 0h640v480H0z"/>
   <path fill="#1c8a42" d="M0 0h640v480z"/>
   <circle cx="320" cy="240" r="57.8" fill="#ffc639"/>

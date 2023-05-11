@@ -1,4 +1,4 @@
-<script>export let size="24";export let ariaLabel="flag of pw" </script><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-pw" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 640 480">
+<script>export let size="24";export let ariaLabel="flag of pw" </script><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-pw" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
   <defs>
     <clipPath id="a">
       <path fill-opacity=".7" d="M-70.3 0h640v480h-640z"/>

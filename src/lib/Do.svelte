@@ -1,4 +1,4 @@
-<script>export let size="24";export let ariaLabel="flag of do" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-do" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 640 480">
+<script>export let size="24";export let ariaLabel="flag of do" </script><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-do" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
   <path fill="#fff" d="M0 0h640v480H0Z"/>
   <path fill="#002d62" d="M0 0h272v192H0Zm368 288h272v192H368Z"/>
   <path fill="#ce1126" d="M0 288h272v192H0ZM368 0h272v192H368Z"/>
