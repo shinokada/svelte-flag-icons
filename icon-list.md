@@ -75,6 +75,7 @@
 - Es.svelte
 - EsCt.svelte
 - EsGa.svelte
+- EsPv.svelte
 - Et.svelte
 - Eu.svelte
 - Fi.svelte
