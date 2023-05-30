@@ -36,7 +36,7 @@
 </svg>
 <!--
 @component
-[Go to Document](https://svelte-ant-design-icons.codewithshin.com/)
+[Go to Document](https://svelte-flag-icons.codewithshin.com/)
 ## Props
 @prop size = '24';
 @prop ariaLabel = 'icon file name';
