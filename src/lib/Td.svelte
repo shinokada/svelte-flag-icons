@@ -1,7 +1,48 @@
-<script>export let size="24";export let ariaLabel="flag of td" </script><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-td" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
+<script>
+  export let size = '24';
+  export let ariaLabel = 'flag of td';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  id="flag-icons-td"
+  width={size}
+  height={size}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 640 480"
+>
   <g fill-rule="evenodd">
-    <path fill="#000067" d="M0 0h214v480H0z"/>
-    <path fill="red" d="M426 0h214v480H426z"/>
-    <path fill="#ff0" d="M214 0h212v480H214z"/>
+    <path fill="#000067" d="M0 0h214v480H0z" />
+    <path fill="red" d="M426 0h214v480H426z" />
+    <path fill="#ff0" d="M214 0h212v480H214z" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to Document](https://svelte-ant-design-icons.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop ariaLabel = 'icon file name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

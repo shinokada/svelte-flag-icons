@@ -1,12 +1,53 @@
-<script>export let size="24";export let ariaLabel="flag of is" </script><svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-is" width={size} height={size} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 640 480">
+<script>
+  export let size = '24';
+  export let ariaLabel = 'flag of is';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  id="flag-icons-is"
+  width={size}
+  height={size}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 640 480"
+>
   <defs>
     <clipPath id="a">
-      <path fill-opacity=".7" d="M0 0h640v480H0z"/>
+      <path fill-opacity=".7" d="M0 0h640v480H0z" />
     </clipPath>
   </defs>
   <g fill-rule="evenodd" stroke-width="0" clip-path="url(#a)">
-    <path fill="#003897" d="M0 0h666.7v480H0z"/>
-    <path fill="#fff" d="M0 186.7h186.7V0h106.6v186.7h373.4v106.6H293.3V480H186.7V293.3H0V186.7z"/>
-    <path fill="#d72828" d="M0 213.3h213.3V0h53.4v213.3h400v53.4h-400V480h-53.4V266.7H0v-53.4z"/>
+    <path fill="#003897" d="M0 0h666.7v480H0z" />
+    <path fill="#fff" d="M0 186.7h186.7V0h106.6v186.7h373.4v106.6H293.3V480H186.7V293.3H0V186.7z" />
+    <path fill="#d72828" d="M0 213.3h213.3V0h53.4v213.3h400v53.4h-400V480h-53.4V266.7H0v-53.4z" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to Document](https://svelte-ant-design-icons.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop ariaLabel = 'icon file name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

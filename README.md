@@ -14,8 +14,7 @@
 <a href="https://www.npmjs.com/package/svelte-flag-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-flag-icons.svg" alt="npm" height="25"></a>
 </p>
 
-260+ [Flag-icons](https://github.com/lipis/flag-icons) for Svelte. 
-
+260+ [Flag-icons](https://github.com/lipis/flag-icons) for Svelte.
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
@@ -45,7 +44,6 @@ If you are a TypeScript user, Add `"moduleResolution": "bundler"` to `tsconfig.j
 
 [Demo 1](https://svelte.dev/repl/754f6d9e949441978f1073b68437129f)
 
-
 ## Icon Names
 
 [Icon list](/icon-list.md)
@@ -70,10 +68,10 @@ If you need only a few icons from this library in your Svelte app, import them d
 
 ```html
 <script>
-  import No from 'svelte-flag-icons/No.svelte'
+  import No from 'svelte-flag-icons/No.svelte';
 </script>
 
-  <No />
+<No />
 ```
 
 If you are a TypeScript user, install **typescript version 5.0.0 or above**.
@@ -95,6 +93,11 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
   }
 }
 ```
+
+## Props
+
+- size = '24';
+- ariaLabel = 'icon file name';
 
 ## Size
 
@@ -167,15 +170,15 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 All icons have the following events:
 
-```
-on:click
-on:mouseenter
-on:mouseleave
-on:mouseover
-on:mouseout
-on:blur
-on:focus
-```
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
 
 ## Using svelte:component
 
@@ -193,8 +196,8 @@ on:focus
 
 ```html
 <script>
-    import * as Flag from "svelte-flag-icons";
-  const users =[
+  import * as Flag from 'svelte-flag-icons';
+  const users = [
     {
       name: 'John',
       country: 'Ca'
@@ -203,16 +206,16 @@ on:focus
       name: 'Jane',
       country: 'Us'
     }
-  ]
-  const user ={
-    country:'Fr'
-  }
+  ];
+  const user = {
+    country: 'Fr'
+  };
 </script>
 
-<svelte:component this={Flag[user.country]} size="20" />
+<svelte:component this="{Flag[user.country]}" size="20" />
 
 {#each users as user}
-  <svelte:component this={Flag[user.country]} size="20" />
+<svelte:component this="{Flag[user.country]}" size="20" />
 {/each}
 ```
 
