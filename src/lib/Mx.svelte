@@ -1,5 +1,6 @@
 <script>
   export let size = '24';
+  export let role = 'img';
   export let ariaLabel = 'flag of mx';
 </script>
 
@@ -9,8 +10,8 @@
   id="flag-icons-mx"
   width={size}
   height={size}
-  class={$$props.class}
   {...$$restProps}
+  {role}
   aria-label={ariaLabel}
   on:click
   on:keydown
@@ -1454,6 +1455,7 @@
 [Go to Document](https://svelte-flag-icons.codewithshin.com/)
 ## Props
 @prop size = '24';
+@prop role = 'img';
 @prop ariaLabel = 'icon file name';
 ## Event
 - on:click

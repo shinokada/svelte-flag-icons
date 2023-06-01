@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.5.3](https://github.com/shinokada/svelte-flag-icons/compare/v0.5.2...v0.5.3) (2023-06-01)
 
-
 ### Features
 
-* add || ^4.0.0 to peerDependencies ([c86b65a](https://github.com/shinokada/svelte-flag-icons/commit/c86b65a289d12bcb44199ec640b48ac07b1da8bc))
+- add || ^4.0.0 to peerDependencies ([c86b65a](https://github.com/shinokada/svelte-flag-icons/commit/c86b65a289d12bcb44199ec640b48ac07b1da8bc))
 
 ### [0.5.2](https://github.com/shinokada/svelte-flag-icons/compare/v0.5.1...v0.5.2) (2023-05-30)
 
-
 ### Bug Fixes
 
-* doc link ([0ac8ee5](https://github.com/shinokada/svelte-flag-icons/commit/0ac8ee5f93198201e6d1e78ab75c195f5251b882))
+- doc link ([0ac8ee5](https://github.com/shinokada/svelte-flag-icons/commit/0ac8ee5f93198201e6d1e78ab75c195f5251b882))
 
 ### [0.5.1](https://github.com/shinokada/svelte-flag-icons/compare/v0.4.4...v0.5.1) (2023-05-30)
 
