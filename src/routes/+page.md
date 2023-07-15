@@ -103,7 +103,9 @@ Use the `size` prop to change the flag sizes.
 
 If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
 
+```html
 <Us class="shrink-0 h-20 w-20" />
+```
 
 ## CSS frameworks support
 
