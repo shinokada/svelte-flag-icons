@@ -14,29 +14,29 @@
   import { MetaTags } from 'svelte-meta-tags';
 
   $: activeUrl = $page.url.pathname;
-  const title = "Svelte Bootstrap SVG Icons"
+  const title = "Svelte Flag Icons"
   let divClass = 'w-full ml-auto lg:block lg:w-auto order-1 lg:order-none';
   let ulClass = 'flex flex-col py-3 my-4 lg:flex-row lg:my-0 text-sm font-medium gap-4';
 </script>
 
 <MetaTags
-  title="Svelte Bootstrap SVG Icons"
-  description="Bootstrap icon set for Svelte"
+  title="Svelte Flag Icons"
+  description="Flag Icon set for Svelte"
   openGraph={{
     type: 'website',
-    url: 'https://svelte-bootstrap-svg-icons.vercel.app/',
-    title: "Svelte Bootstrap SVG Icons",
-    description: "Bootstrap icon set for Svelte",
-    images: [{ url: 'https://open-graph-vercel.vercel.app/api/svelte-bootstrap-svg-icons', width: 1200, height: 630, alt: "Svelte Bootstrap SVG Icons" }],
-    site_name: 'Svelte Bootstrap SVG Icons'
+    url: 'https://svelte-flag-icons.vercel.app/',
+    title: "Svelte Flag Icons",
+    description: "Flag Icon set for Svelte",
+    images: [{ url: 'https://open-graph-vercel.vercel.app/api/svelte-flag-icons', width: 1200, height: 630, alt: "Svelte Flag Icons" }],
+    site_name: 'Svelte Flag Icons'
   }}
   twitter={{
     handle: '@shinokada',
     cardType: 'summary_large_image',
-    title: "Svelte Bootstrap SVG Icons",
-    description: "Bootstrap icon set for Svelte",
-    image:'https://open-graph-vercel.vercel.app/api/svelte-bootstrap-svg-icons',
-    imageAlt: "Svelte Bootstrap SVG Icons"
+    title: "Svelte Flag Icons",
+    description: "Flag Icon set for Svelte",
+    image:'https://open-graph-vercel.vercel.app/api/svelte-flag-icons',
+    imageAlt: "Svelte Flag Icons"
   }} />
   
 <header class="flex-none w-full mx-auto bg-white dark:bg-neutral-600">
@@ -49,7 +49,7 @@
       >
     <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
     <NavLi href="/icons" active={activeUrl === '/icons'}>Icons</NavLi>
-    <NavLi href="https://github.com/shinokada/svelte-bootstrap-svg-icons">GitHub</NavLi>
+    <NavLi href="https://github.com/shinokada/svelte-flag-icons">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
   <div class="flex items-center ml-auto">
@@ -65,15 +65,15 @@
 <Footer footerType="logo" class="dark:bg-neutral-600">
   <div class="sm:flex sm:items-center sm:justify-between">
     <FooterBrand
-    href="https://svelte-bootstrap-svg-icons.vercel.app/"
-    name="Svelte Bootstrap SVG Icons"
+    href="https://svelte-flag-icons.vercel.app/"
+    name="Svelte Flag Icons"
     classSpan="text-primary-700 dark:text-primary-500"
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
     <FooterLink href="/">Home</FooterLink>
     <FooterLink href="/icons">Icons</FooterLink>
-    <FooterLink href="https://github.com/shinokada/svelte-bootstrap-svg-icons/blob/main/LICENSE">Licensing</FooterLink>
-    <FooterLink href="https://github.com/shinokada/svelte-bootstrap-svg-icons/">GitHub</FooterLink>
+    <FooterLink href="https://github.com/shinokada/svelte-flag-icons/blob/main/LICENSE">Licensing</FooterLink>
+    <FooterLink href="https://github.com/shinokada/svelte-flag-icons/">GitHub</FooterLink>
   </FooterLinkGroup>
   </div>
 </Footer>
