@@ -8,7 +8,7 @@
     "url": "https://blog.codewithshin.com"
   },
   "bugs": "https://github.com/shinokada/svelte-flag-icons/issues",
-  "homepage": "https://svelte-flag-icons.codewithshin.com",
+  "homepage": "https://svelte-flag-icons..vercel.app",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
