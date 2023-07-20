@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.6](https://github.com/shinokada/svelte-flag-icons/compare/v0.5.5...v0.5.6) (2023-07-20)
+
+
+### Features
+
+* add size range ([31dc914](https://github.com/shinokada/svelte-flag-icons/commit/31dc9147c47c7bc727077fafdadbdae69627ed9c))
+* update layout ([1e3d2de](https://github.com/shinokada/svelte-flag-icons/commit/1e3d2de3008869933fa7f5588367517d344d6cd2))
+
+
+### Bug Fixes
+
+* add backticks ([78655c0](https://github.com/shinokada/svelte-flag-icons/commit/78655c0e2fc1eb18c58edb7acbc0708b9795339e))
+* homepage update ([77f31c3](https://github.com/shinokada/svelte-flag-icons/commit/77f31c32375727d921769fa0a4e3a4e434004a43))
+* image sizes ([5d3e86f](https://github.com/shinokada/svelte-flag-icons/commit/5d3e86f564a9dd2392943b3972a190f8f211a64a))
+* typo ([99d9d77](https://github.com/shinokada/svelte-flag-icons/commit/99d9d77ac04e853c0d4eaa6983f809853254debd))
+* update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([a8f3a4d](https://github.com/shinokada/svelte-flag-icons/commit/a8f3a4d41cea8fbf1391beef5fd350cd45bfea23))
+
 ### [0.5.5](https://github.com/shinokada/svelte-flag-icons/compare/v0.5.4...v0.5.5) (2023-06-15)
 
 ### [0.5.4](https://github.com/shinokada/svelte-flag-icons/compare/v0.5.3...v0.5.4) (2023-06-01)
