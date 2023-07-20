@@ -1,6 +1,6 @@
 {
   "name": "svelte-flag-icons",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "Flag icon components for Sveltejs",
   "author": {
     "name": "Shinichi Okada",
@@ -8,7 +8,7 @@
     "url": "https://blog.codewithshin.com"
   },
   "bugs": "https://github.com/shinokada/svelte-flag-icons/issues",
-  "homepage": "https://svelte-flag-icons..vercel.app",
+  "homepage": "https://svelte-flag-icons.vercel.app",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
