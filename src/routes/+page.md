@@ -41,95 +41,62 @@ pnpm i -D svelte-flag-icons
 
 ```html
 <script>
-  import { Us } from 'svelte-flag-icons';
+  import { Icon } from 'svelte-flag-icons';
 </script>
 
-<Us />
-```
-
-## Faster compiling
-
-If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
-
-```html
-<script>
-  import No from 'svelte-flag-icons/No.svelte';
-</script>
-
-<No />
-```
-
-If you are a TypeScript user, install **typescript version 5.0.0 or above**.
-
-```sh
-pnpm i -D typescript@beta
-```
-
-To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  //...
-  "compilerOptions": {
-    // ...
-    "moduleResolution": "nodenext"
-  }
-}
+<Icon name="us" />
 ```
 
 ## Props
 
-- size = '24';
-- role = 'img';
-- ariaLabel = 'icon file name';
+- export let name;
+- export let width = "24";
+- export let height = "24";
+- export let role = 'img';
+- export let ariaLabel = name;
 
 ## IDE support
 
 If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, features, props, events, and an example.
 
+
 ## Size
 
-Use the `size` prop to change the flag sizes.
+Use the `width` and `height` props to change the size of icons.
 
 ```html
-<script>
-  import { Us } from 'svelte-flag-icons';
-</script>
-
-<div>
-  <Us size="200" />
-</div>
+<Icon name="us" width="100" height="100" />
 ```
 
 If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
 
 ```html
-<Us class="shrink-0 h-20 w-20" />
+<Icon name="us" class="shrink-0 h-20 w-20" />
 ```
 
-## CSS frameworks support
+## CSS frameworks suport
 
 You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
 
 Tailwind CSS example:
 
 ```html
-<Us class="rounded-full bg-white h-40 w-40 ring-2 ring-gray-300 m-4" />
+<Icon name="us" class="inline m-1" />
 ```
 
-Bootstrap example:
+Bootstrap examples:
 
 ```html
-<Us class="position-absolute top-0 px-1" />
+<Icon name="us" class="position-absolute top-0 px-1" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `Us` has `aria-label="flag of us"`.
+All icons have aria-label. For example `us` has `aria-label="us"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<Us ariaLabel="United States of America" />
+<Icon name="us" ariaLabel="us flag" />
 ```
 
 ## Unfocusable icon
@@ -137,7 +104,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<Us tabindex="-1" />
+<Icon name="us"  tabindex="-1" />
 ```
 
 ## Events
@@ -159,87 +126,50 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<Us tabindex="0" />
+<Icon name="us"  tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<script>
-  import { Ca } from 'svelte-flag-icons';
-</script>
-
-<svelte:component this="{Ca}" />
-```
-
-## Rendering Dynamically
-
-[REPL](https://svelte.dev/repl/e986f22713d34ec2b5e8fdd98301f936?version=4.0.5)
-
-```html
-<script>
-  import * as Flag from "svelte-flag-icons";
-	const users =[
-		{
-			name: 'John',
-			country: 'Ca'
-		},
-		{
-			name: 'Jane',
-			country: 'Us'
-		}
-	]
-	const a_user ={
-		country:'Fr'
-	}
-</script>
-
-<svelte:component this={Flag[a_user.country]} size="100" style="margin-right:10px;" />
-
-{#each users as user}
-  <svelte:component this={Flag[user.country]} size="100" style="margin-right: 10px;"/>
-{/each}
+<svelte:component this="{Icon}" name="us" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { ChatPlus } from 'svelte-flag-icons';
+  import {Icon} from 'svelte-flag-icons';
   import { onMount } from 'svelte';
   const props = {
+    name: 'us',
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new Us({ target: document.body, props });
+    const icon = new Icon({ target: document.body, props });
   });
 </script>
 ```
 
+
 ## Import all
 
-Use `import * as Icon from 'svelte-flag-icons`.
-
-[REPL](https://svelte.dev/repl/754f6d9e949441978f1073b68437129f?version=3.48.0)
+Use `import {Icon, icons} from 'svelte-flag-icons';`.
 
 ```html
 <script>
-  import * as Icon from 'svelte-flag-icons';
+  import {Icon, icons} from 'svelte-flag-icons';
 </script>
-<h1>Size</h1>
-<Icon.Fr size="30" />
-<Icon.De size="40" />
 
-<h1>CSS HEX color</h1>
-<Icon.Dk color="#c61515" size="40" />
-
-<h1>Tailwind CSS</h1>
-<Icon.Jp class="text-blue-500" />
-<Icon.No class="text-pink-700" />
+{#each Object.keys(icons) as name}
+<div class="flex gap-4 items-center text-lg">
+  <Icon name={name} class="shrink-0"/>
+  {name}
+</div>
+{/each}
 ```
 
 ## Other icons
 
 [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
-

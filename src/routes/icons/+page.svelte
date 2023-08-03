@@ -1,13 +1,10 @@
 <script>
   import Label from 'flowbite-svelte/Label.svelte';
   import Range from 'flowbite-svelte/Range.svelte';
-  import Tabs from 'flowbite-svelte/Tabs.svelte';
-  import TabItem from 'flowbite-svelte/TabItem.svelte';
   import TableSearch from 'flowbite-svelte/TableSearch.svelte';
   import Icon from '$lib/Icon.svelte';
   import icons from '$lib/icons.js';
-  import { random_tailwind_color, random_hex_color_code} from '../utils.js'
-
+  
   const contentClass = 'rounded-lg dark:bg-cyan-950 mt-4';
   let searchTerm = '';
 
@@ -16,7 +13,7 @@
   });
   let size="30"
 </script>
-<h1>Svelte Flag Icons</h1>
+<h1>Svelte Flag Icons: Icons</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
