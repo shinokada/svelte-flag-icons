@@ -1,6 +1,8 @@
 <script>
-  export let size = '24';
-  export let role = 'img';
+  import { getContext } from 'svelte';
+  const ctx = getContext('iconCtx') ?? {};
+  export let size = ctx.size || '24';
+  export let role = ctx.role || 'img';
   export let ariaLabel = 'flag of pt';
 </script>
 
@@ -93,7 +95,7 @@
       fill="red"
       stroke="#000"
       stroke-width=".5"
-      d="M182.8 211.1a56.4 56.4 0 0 0 16.8 40 57 57 0 0 0 40.2 16.8 56.9 56.9 0 0 0 40.2-16.6 56.4 56.4 0 0 0 16.7-40v-77H183v76.8m91-53.7v48.9l-.1 5.1a33.2 33.2 0 0 1-10 24 34 34 0 0 1-24 10c-9.4 0-17.7-4-23.9-10.2a34 34 0 0 1-10-24v-54l68 .2z"
+      d="M183 211.1a56.4 56.4 0 0 0 16.8 40 57 57 0 0 0 40.2 16.8 56.9 56.9 0 0 0 40.2-16.6 56.4 56.4 0 0 0 16.7-40v-77H183v76.8m91-53.7v48.9l-.1 5.1a33.2 33.2 0 0 1-10 24 34 34 0 0 1-24 10c-9.4 0-17.7-4-23.9-10.2a34 34 0 0 1-10-24v-54l68 .2z"
     />
     <g id="pt-e">
       <g id="pt-d" fill="#ff0" stroke="#000" stroke-width=".5">
@@ -142,7 +144,7 @@
 @component
 [Go to docs](https://svelte-flag-icons.vercel.app)
 ## Props
-@prop export let size = '24';
-@prop export let role = 'img';
+@prop export let size = ctx.size || '24';
+@prop export let role = ctx.role || 'img';
 @prop export let ariaLabel = 'flag of pt';
 -->
