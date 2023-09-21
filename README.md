@@ -180,7 +180,6 @@ To use your custom default icon in a Svelte page, do the following:
 
 Here, we import the `MyIcon` component and the `Us` icon. By passing the `Us` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.
 
-
 ## CSS frameworks support
 
 You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.

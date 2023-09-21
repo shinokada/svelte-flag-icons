@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.7.1](https://github.com/shinokada/svelte-flag-icons/compare/v0.6.2...v0.7.1) (2023-08-31)
 
-
 ### Features
 
-* smaller compiled size and Icon component ([0893d6a](https://github.com/shinokada/svelte-flag-icons/commit/0893d6adf32222b61d66d34457e551b5c38eb36f))
+- smaller compiled size and Icon component ([0893d6a](https://github.com/shinokada/svelte-flag-icons/commit/0893d6adf32222b61d66d34457e551b5c38eb36f))
 
 ### [0.6.2](https://github.com/shinokada/svelte-flag-icons/compare/v0.6.1...v0.6.2) (2023-08-03)
 

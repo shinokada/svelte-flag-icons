@@ -1,3 +1,7 @@
+---
+layout: mainLayout
+---
+
 # Svelte Flag Icons
 
 <div class="flex gap-2 my-8">
@@ -179,7 +183,6 @@ To use your custom default icon in a Svelte page, do the following:
 ```
 
 Here, we import the `MyIcon` component and the `Us` icon. By passing the `Us` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.
-
 
 ## CSS frameworks support
 
