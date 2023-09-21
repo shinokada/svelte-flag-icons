@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.2](https://github.com/shinokada/svelte-flag-icons/compare/v0.7.1...v0.7.2) (2023-09-21)
+
+
+### Features
+
+* add context ([a1da65a](https://github.com/shinokada/svelte-flag-icons/commit/a1da65a64ac6749725a8ff5fde41739506ff2308))
+* add sidebar menu ([64fc6d0](https://github.com/shinokada/svelte-flag-icons/commit/64fc6d0223df07e1a270f508465f0ce6c8838074))
+
 ### [0.7.1](https://github.com/shinokada/svelte-flag-icons/compare/v0.6.2...v0.7.1) (2023-08-31)
 
 ### Features
