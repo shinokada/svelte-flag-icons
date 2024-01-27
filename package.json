@@ -1,6 +1,6 @@
 {
   "name": "svelte-flag-icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "description": "Flag icon components for Sveltejs",
   "author": {

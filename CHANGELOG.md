@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/shinokada/svelte-flag-icons/compare/v0.7.2...v1.0.1) (2024-01-27)
+
+
+### Bug Fixes
+
+* add class="ml-3 m-0 lg:hidden md:block" to NavHamburger ([804a5b9](https://github.com/shinokada/svelte-flag-icons/commit/804a5b9cd838bc54d281055935d1c3c054b82575))
+* badge size ([801dcff](https://github.com/shinokada/svelte-flag-icons/commit/801dcff4f40221c3d382d444d23da9699fbb2e93))
+
 ### [0.7.2](https://github.com/shinokada/svelte-flag-icons/compare/v0.7.1...v0.7.2) (2023-09-21)
 
 ### Features
