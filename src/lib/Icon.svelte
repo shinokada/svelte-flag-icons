@@ -10,7 +10,7 @@
 
 <!--
 @component
-[Go to docs](https://svelte-flag-icons.vercel.app)
+[Go to docs](https://svelte-flag-icons.codewithshin.com)
 ## Props
 @prop export let icon: ComponentType;
 @prop export let size: number = 24;
