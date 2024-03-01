@@ -20,16 +20,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [GitHub Repo](https://github.com/shinokada/svelte-flag-icons)
 
-## Original source
-
-[lipis/flag-icons](https://github.com/lipis/flag-icons)
-
-## License
-
-[Svelte-Flag-Icons License](https://github.com/shinokada/svelte-flag-icons/LICENSE)
-
-[lipis/flag-icons License](https://github.com/lipis/flag-icons/blob/main/LICENSE)
-
 ## Installation
 
 ```sh
@@ -353,6 +343,16 @@ Use `import * as Icon from 'svelte-flag-icons`.
 <Icon.No class="text-pink-700" />
 ```
 
+## Original source
+
+[lipis/flag-icons](https://github.com/lipis/flag-icons)
+
+## License
+
+[Svelte-Flag-Icons License](https://github.com/shinokada/svelte-flag-icons/LICENSE)
+
+[lipis/flag-icons License](https://github.com/lipis/flag-icons/blob/main/LICENSE)
+
 ## Other icons
 
-[Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+[Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
