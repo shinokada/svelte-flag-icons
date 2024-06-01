@@ -1,53 +1,89 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let ariaLabel = 'flag of cf';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "cf" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  id="flag-icons-cf"
-  width={size}
-  height={size}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  viewBox="0 0 640 480"
->
-  <defs>
-    <clipPath id="cf-a">
-      <path fill-opacity=".7" d="M-12.4 32h640v480h-640z" />
-    </clipPath>
-  </defs>
-  <g fill-rule="evenodd" clip-path="url(#cf-a)" transform="translate(12.4 -32)">
-    <path fill="#00f" d="M-52 32h719.3v119H-52z" />
-    <path fill="#ff0" d="M-52 391.6h719.3V512H-52z" />
-    <path fill="#009a00" d="M-52 271.3h719.3v120.3H-52z" />
-    <path fill="#fff" d="M-52 151h719.3v120.3H-52z" />
-    <path fill="red" d="M247.7 32.5h119.9V512H247.7z" />
-    <path
-      fill="#ff0"
-      d="m99.3 137.7-31.5-21.8-31.3 22L47.4 101 16.9 78l38.2-1 12.5-36.3L80.3 77l38.1.7L88.2 101"
-    />
-  </g>
-</svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flag-icons.codewithshin.com)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'flag of cf';
--->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 640 480"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+         <defs>     <clipPath id="cf-a">       <path fill-opacity=".7" d="M-12.4 32h640v480h-640z"/>     </clipPath>   </defs>   <g fill-rule="evenodd" clip-path="url(#cf-a)" transform="translate(12.4 -32)">     <path fill="#00f" d="M-52 32h719.3v119H-52z"/>     <path fill="#ff0" d="M-52 391.6h719.3V512H-52z"/>     <path fill="#009a00" d="M-52 271.3h719.3v120.3H-52z"/>     <path fill="#fff" d="M-52 151h719.3v120.3H-52z"/>     <path fill="red" d="M247.7 32.5h119.9V512H247.7z"/>     <path fill="#ff0" d="m99.3 137.7-31.5-21.8-31.3 22L47.4 101 16.9 78l38.2-1 12.5-36.3L80.3 77l38.1.7L88.2 101"/>   </g>  
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 640 480"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+         <defs>     <clipPath id="cf-a">       <path fill-opacity=".7" d="M-12.4 32h640v480h-640z"/>     </clipPath>   </defs>   <g fill-rule="evenodd" clip-path="url(#cf-a)" transform="translate(12.4 -32)">     <path fill="#00f" d="M-52 32h719.3v119H-52z"/>     <path fill="#ff0" d="M-52 391.6h719.3V512H-52z"/>     <path fill="#009a00" d="M-52 271.3h719.3v120.3H-52z"/>     <path fill="#fff" d="M-52 151h719.3v120.3H-52z"/>     <path fill="red" d="M247.7 32.5h119.9V512H247.7z"/>     <path fill="#ff0" d="m99.3 137.7-31.5-21.8-31.3 22L47.4 101 16.9 78l38.2-1 12.5-36.3L80.3 77l38.1.7L88.2 101"/>   </g>  
+  </svg>
+{/if}

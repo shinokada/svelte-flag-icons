@@ -1,60 +1,89 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let ariaLabel = 'flag of kr';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "kr" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  id="flag-icons-kr"
-  width={size}
-  height={size}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  viewBox="0 0 640 480"
->
-  <defs>
-    <clipPath id="kr-a">
-      <path fill-opacity=".7" d="M-95.8-.4h682.7v512H-95.8z" />
-    </clipPath>
-  </defs>
-  <g fill-rule="evenodd" clip-path="url(#kr-a)" transform="translate(89.8 .4) scale(.9375)">
-    <path fill="#fff" d="M-95.8-.4H587v512H-95.8Z" />
-    <g transform="rotate(-56.3 361.6 -101.3) scale(10.66667)">
-      <g id="kr-c">
-        <path id="kr-b" d="M-6-26H6v2H-6Zm0 3H6v2H-6Zm0 3H6v2H-6Z" />
-        <use xlink:href="#kr-b" width="100%" height="100%" y="44" />
-      </g>
-      <path stroke="#fff" d="M0 17v10" />
-      <path fill="#cd2e3a" d="M0-12a12 12 0 0 1 0 24Z" />
-      <path fill="#0047a0" d="M0-12a12 12 0 0 0 0 24A6 6 0 0 0 0 0Z" />
-      <circle cy="-6" r="6" fill="#cd2e3a" />
-    </g>
-    <g transform="rotate(-123.7 191.2 62.2) scale(10.66667)">
-      <use xlink:href="#kr-c" width="100%" height="100%" />
-      <path stroke="#fff" d="M0-23.5v3M0 17v3.5m0 3v3" />
-    </g>
-  </g>
-</svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flag-icons.codewithshin.com)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let ariaLabel = 'flag of kr';
--->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 640 480"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+         <defs>     <clipPath id="kr-a">       <path fill-opacity=".7" d="M-95.8-.4h682.7v512H-95.8z"/>     </clipPath>   </defs>   <g fill-rule="evenodd" clip-path="url(#kr-a)" transform="translate(89.8 .4)scale(.9375)">     <path fill="#fff" d="M-95.8-.4H587v512H-95.8Z"/>     <g transform="rotate(-56.3 361.6 -101.3)scale(10.66667)">       <g id="kr-c">         <path id="kr-b" fill="#000001" d="M-6-26H6v2H-6Zm0 3H6v2H-6Zm0 3H6v2H-6Z"/>         <use xlink:href="#kr-b" width="100%" height="100%" y="44"/>       </g>       <path stroke="#fff" d="M0 17v10"/>       <path fill="#cd2e3a" d="M0-12a12 12 0 0 1 0 24Z"/>       <path fill="#0047a0" d="M0-12a12 12 0 0 0 0 24A6 6 0 0 0 0 0Z"/>       <circle cy="-6" r="6" fill="#cd2e3a"/>     </g>     <g transform="rotate(-123.7 191.2 62.2)scale(10.66667)">       <use xlink:href="#kr-c" width="100%" height="100%"/>       <path stroke="#fff" d="M0-23.5v3M0 17v3.5m0 3v3"/>     </g>   </g>  
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 640 480"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+         <defs>     <clipPath id="kr-a">       <path fill-opacity=".7" d="M-95.8-.4h682.7v512H-95.8z"/>     </clipPath>   </defs>   <g fill-rule="evenodd" clip-path="url(#kr-a)" transform="translate(89.8 .4)scale(.9375)">     <path fill="#fff" d="M-95.8-.4H587v512H-95.8Z"/>     <g transform="rotate(-56.3 361.6 -101.3)scale(10.66667)">       <g id="kr-c">         <path id="kr-b" fill="#000001" d="M-6-26H6v2H-6Zm0 3H6v2H-6Zm0 3H6v2H-6Z"/>         <use xlink:href="#kr-b" width="100%" height="100%" y="44"/>       </g>       <path stroke="#fff" d="M0 17v10"/>       <path fill="#cd2e3a" d="M0-12a12 12 0 0 1 0 24Z"/>       <path fill="#0047a0" d="M0-12a12 12 0 0 0 0 24A6 6 0 0 0 0 0Z"/>       <circle cy="-6" r="6" fill="#cd2e3a"/>     </g>     <g transform="rotate(-123.7 191.2 62.2)scale(10.66667)">       <use xlink:href="#kr-c" width="100%" height="100%"/>       <path stroke="#fff" d="M0-23.5v3M0 17v3.5m0 3v3"/>     </g>   </g>  
+  </svg>
+{/if}
