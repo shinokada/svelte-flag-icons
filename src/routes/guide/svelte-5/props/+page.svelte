@@ -1,6 +1,6 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
-  import { Accessibility } from 'runes-webkit';
+  import { Jp } from '$lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -77,11 +77,10 @@
 <HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} />
 
 <CodeWrapper>
-  <Accessibility
-    title={{ id: 'my-title', title: 'A green accessibility' }}
-    desc={{ id: 'my-descrip', desc: 'The shape of a green accessibility icon' }}
-    ariaLabel="green accessibility"
-    color="green"
+  <Jp
+    title={{ id: 'my-title', title: 'Japanese flag icon' }}
+    desc={{ id: 'my-descrip', desc: 'Red sun on white field, simple design for easy recognition.' }}
+    ariaLabel="Japanese flag"
   />
 </CodeWrapper>
 

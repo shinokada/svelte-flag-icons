@@ -54,9 +54,9 @@
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
     viewBox="0 0 640 480"
-    onclick={onclick}
-    onkeydown={onkeydown}
-    onkeyup={onkeyup}
+    {onclick}
+    {onkeydown}
+    {onkeyup}
   >
     {#if title?.id && title.title}
       <title id="{title.id}">{title.title}</title>
