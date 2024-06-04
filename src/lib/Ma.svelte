@@ -87,3 +87,20 @@
          <path fill="#c1272d" d="M640 0H0v480h640z"/>   <path fill="none" stroke="#006233" stroke-width="11.7" d="M320 179.4 284.4 289l93.2-67.6H262.4l93.2 67.6z"/>  
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop desc
+@prop class: classname
+@prop ariaLabel =  "ma"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
+-->

@@ -4,5 +4,7 @@
   "initialVersions": {
     "svelte-flag-icons": "2.0.0-next.0"
   },
-  "changesets": []
+  "changesets": [
+    "swift-jokes-tap"
+  ]
 }

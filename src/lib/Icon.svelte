@@ -18,3 +18,15 @@
   class={classname} 
   aria-label={ariaLabel}
 />
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop icon
+@prop size = '24'
+@prop role = 'img'
+@prop ariaLabel = 'Icon'
+@prop class: classname
+@prop ...restProps
+-->

@@ -87,3 +87,20 @@
          <g fill-rule="evenodd">     <path fill="#000001" d="m0 0 320 240L0 480zm640 0L320 240l320 240z"/>     <path fill="#090" d="m0 0 320 240L640 0zm0 480 320-240 320 240z"/>     <path fill="#fc0" d="M640 0h-59.6L0 435.3V480h59.6L640 44.7z"/>     <path fill="#fc0" d="M0 0v44.7L580.4 480H640v-44.7L59.6 0z"/>   </g>  
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop desc
+@prop class: classname
+@prop ariaLabel =  "jm"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
+-->
