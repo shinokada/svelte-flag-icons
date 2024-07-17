@@ -1,5 +1,12 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3, removeHyphensAndCapitalize } from 'runes-webkit';
+  import {
+    HighlightCompo,
+    CodeWrapper,
+    Code,
+    H2,
+    H3,
+    removeHyphensAndCapitalize
+  } from 'runes-webkit';
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -29,12 +36,6 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} />
 
-<H2>Color</H2>
-
-<p>Use the color props to change colors with HEX color code or HTML color name:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/css-hex-color.md'] as string} />
-
 <H2>CSS framework</H2>
 
 <p>
@@ -50,24 +51,12 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/bootstrap.md'] as string} />
 
-<H2>Dark mode</H2>
-
-<p>
-  If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the <Code
-    >class</Code
-  > prop.
-</p>
-
-<p>Let's use <Code>dark</Code> for the dark mode class as an example.</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/dark-mode.md'] as string} />
-
 <H2>aria-label</H2>
 
 <p>
-  All icons have aria-label. For example <Code>AdminLineUserFaces</Code> has <Code
-    >aria-label="admin line user faces"</Code
-  >. Use <Code>ariaLabel</Code> prop to modify the <Code>aria-label</Code> value.
+  All icons have aria-label. For example <Code>Us</Code> has <Code>aria-label="us"</Code>. Use <Code
+    >ariaLabel</Code
+  > prop to modify the <Code>aria-label</Code> value.
 </p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/a11y.md'] as string} />

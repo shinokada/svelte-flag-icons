@@ -1,1 +1,1 @@
-<AdminLineUserFaces on:click="{handleClick}" />
+<Us on:click="{handleClick}" />

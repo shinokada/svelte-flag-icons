@@ -1,1 +1,1 @@
-<Accessibility class="position-absolute top-0 px-1" />
+<Jp class="position-absolute top-0 px-1" />

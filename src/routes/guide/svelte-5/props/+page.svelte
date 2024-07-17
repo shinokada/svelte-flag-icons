@@ -1,6 +1,7 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
   import { Jp } from '$lib';
+  import { A, P } from 'svelte-5-ui-lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -11,7 +12,12 @@
 <h1>Props - Svelte Flag Icons v2</h1>
 
 <H2>Props</H2>
-
+<P>
+  All icons are extended <A
+    href="https://github.com/sveltejs/svelte/blob/main/packages/svelte/elements.d.ts"
+    >SVGAttributes from svelte/elements</A
+  >.
+</P>
 <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
 
 <H2>Size</H2>
@@ -29,12 +35,6 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} />
 
-<H2>Colors</H2>
-
-<p>Use the color props to change colors with HEX color code or HTML color names:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/css-hex-color.md'] as string} />
-
 <H2>CSS framework</H2>
 
 <p>
@@ -50,22 +50,12 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/bootstrap.md'] as string} />
 
-<H2>Dark mode</H2>
-
-<p>
-  If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the <Code
-    >class</Code
-  > prop.
-</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/dark-mode.md'] as string} />
-
 <H2>A11y</H2>
 
 <p>
-  All icons have aria-label. For example <Code>AddressBookSolid</Code> has <Code
-    >aria-label="addressbook solid"</Code
-  >. Use <Code>ariaLabel</Code> prop to modify the <Code>aria-label</Code> value.
+  All icons have aria-label. For example <Code>Jp</Code> has <Code>aria-label="jp"</Code>. Use <Code
+    >ariaLabel</Code
+  > prop to modify the <Code>aria-label</Code> value.
 </p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/a11y.md'] as string} />
@@ -84,34 +74,22 @@
   />
 </CodeWrapper>
 
-<H2>withEvents</H2>
-
-<p>
-  As default all icons are unfocusable. However you can add <Code>withEvents</Code> prop to make your
-  icons focusable.
-</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/withevents.md'] as string} />
-
-<p>
-  It is possible to add <Code>tabindex="0"</Code>, but it is not recommended for A11y. If you want
-  to use it add <Code>withEvents</Code> props.
-</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/withevents-2.md'] as string} />
-
-<H2>Events</H2>
-
-<p>
-  The following events are forwarded as the default. Since all the components are using <Code
-    >...restProps</Code
-  >, you can add any events.
-</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/events.md'] as string} />
-
 <H2>Passing down other attributes</H2>
 
-<p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
+<P>
+  Since all icons have <Code>...restProps</Code>, you can pass other <A
+    target="_blank"
+    href="https://github.com/sveltejs/svelte/blob/main/packages/svelte/elements.d.ts"
+    >SVGAttributes</A
+  >.
+</P>
 
+<CodeWrapper>
+  <Jp
+    id="my-svg"
+    transform="rotate(45)"
+    class="hover:cursor-pointer dark:text-white"
+    onclick={() => alert('hello')}
+  />
+</CodeWrapper>
 <HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />

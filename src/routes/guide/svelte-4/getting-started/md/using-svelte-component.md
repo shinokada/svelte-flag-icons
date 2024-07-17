@@ -1,5 +1,5 @@
 <script>
-  import { AdminLineUserFaces } from 'svelte-flag-icons';
+  import { Us } from 'svelte-flag-icons';
 </script>
 
-<svelte:component this="{AdminLineUserFaces}" />
+<svelte:component this="{Us}" />

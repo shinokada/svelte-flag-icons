@@ -20,7 +20,10 @@
     ><img src="https://img.shields.io/npm/v/svelte-flag-icons/next" alt="npm" /></a
   >
   <a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"
-    ><img src="https://img.shields.io/github/license/shinokada/svelte-flag-icons" alt="License" /></a
+    ><img
+      src="https://img.shields.io/github/license/shinokada/svelte-flag-icons"
+      alt="License"
+    /></a
   >
   <a href="https://www.npmjs.com/package/svelte-flag-icons" rel="nofollow" target="_blank"
     ><img src="https://img.shields.io/npm/dw/svelte-flag-icons.svg" alt="npm" /></a
@@ -36,7 +39,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
-<p>Install <Code>svelte-awesome-icons v2</Code>:</p>
+<p>Install <Code>svelte-flag-icons v2</Code>:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
 

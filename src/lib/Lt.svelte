@@ -1,5 +1,7 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
     id?: string;
     title?: string;
@@ -8,85 +10,67 @@
     id?: string;
     desc?: string;
   };
-  interface BaseProps {
+  interface BaseProps extends SVGAttributes<SVGElement> {
     size?: string;
     role?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "lt" , 
-    onclick, 
-    onkeydown, 
-    onkeyup,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'lt',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 640 480"
-    onclick={onclick}
-    onkeydown={onkeydown}
-    onkeyup={onkeyup}
-  >
-    {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
-    {/if}
-         <g fill-rule="evenodd" stroke-width="1pt" transform="scale(.64143 .96773)">     <rect width="1063" height="708.7" fill="#006a44" rx="0" ry="0" transform="scale(.93865 .69686)"/>     <rect width="1063" height="236.2" y="475.6" fill="#c1272d" rx="0" ry="0" transform="scale(.93865 .69686)"/>     <path fill="#fdb913" d="M0 0h997.8v164.6H0z"/>   </g>  
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 640 480"
-  >
-    {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
-    {/if}
-         <g fill-rule="evenodd" stroke-width="1pt" transform="scale(.64143 .96773)">     <rect width="1063" height="708.7" fill="#006a44" rx="0" ry="0" transform="scale(.93865 .69686)"/>     <rect width="1063" height="236.2" y="475.6" fill="#c1272d" rx="0" ry="0" transform="scale(.93865 .69686)"/>     <path fill="#fdb913" d="M0 0h997.8v164.6H0z"/>   </g>  
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 640 480"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <g fill-rule="evenodd" stroke-width="1pt" transform="scale(.64143 .96773)">
+    <rect
+      width="1063"
+      height="708.7"
+      fill="#006a44"
+      rx="0"
+      ry="0"
+      transform="scale(.93865 .69686)"
+    />
+    <rect
+      width="1063"
+      height="236.2"
+      y="475.6"
+      fill="#c1272d"
+      rx="0"
+      ry="0"
+      transform="scale(.93865 .69686)"
+    /> <path fill="#fdb913" d="M0 0h997.8v164.6H0z" />
+  </g>
+</svg>
 
 <!--
 @component
@@ -94,13 +78,8 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "lt"
-@prop onclick
-@prop onkeydown
-@prop onkeyup
+@prop ariaLabel = 'lt'
 @prop ...restProps
 -->

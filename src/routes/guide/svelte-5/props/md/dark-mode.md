@@ -1,1 +1,1 @@
-<Accessibility class="text-blue-700 dark:text-red-500" />
+<Jp class="text-blue-700 dark:text-red-500" />

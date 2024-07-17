@@ -1,1 +1,1 @@
-<Accessibility tabindex="0" withEvents />
+<Jp tabindex="0" withEvents />

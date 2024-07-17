@@ -1,5 +1,7 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
     id?: string;
     title?: string;
@@ -8,85 +10,59 @@
     id?: string;
     desc?: string;
   };
-  interface BaseProps {
+  interface BaseProps extends SVGAttributes<SVGElement> {
     size?: string;
     role?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "ba" , 
-    onclick, 
-    onkeydown, 
-    onkeyup,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'ba',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 640 480"
-    onclick={onclick}
-    onkeydown={onkeydown}
-    onkeyup={onkeyup}
-  >
-    {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
-    {/if}
-         <defs>     <clipPath id="ba-a">       <path fill-opacity=".7" d="M-85.3 0h682.6v512H-85.3z"/>     </clipPath>   </defs>   <g fill-rule="evenodd" clip-path="url(#ba-a)" transform="translate(80)scale(.9375)">     <path fill="#009" d="M-85.3 0h682.6v512H-85.3z"/>     <path fill="#FC0" d="m56.5 0 511 512.3V.3z"/>     <path fill="#FFF" d="M439.9 481.5 412 461.2l-28.6 20.2 10.8-33.2-28.2-20.5h35l10.8-33.2 10.7 33.3h35l-28 20.7zm81.3 10.4-35-.1-10.7-33.3-10.8 33.2h-35l28.2 20.5-10.8 33.2 28.6-20.2 28 20.3-10.5-33zM365.6 384.7l28-20.7-35-.1-10.7-33.2-10.8 33.2-35-.1 28.2 20.5-10.8 33.3 28.6-20.3 28 20.4zm-64.3-64.5 28-20.6-35-.1-10.7-33.3-10.9 33.2h-34.9l28.2 20.5-10.8 33.2 28.6-20.2 27.9 20.3zm-63.7-63.6 28-20.7h-35L220 202.5l-10.8 33.2h-35l28.2 20.4-10.8 33.3 28.6-20.3 28 20.4-10.5-33zm-64.4-64.3 28-20.6-35-.1-10.7-33.3-10.9 33.2h-34.9L138 192l-10.8 33.2 28.6-20.2 27.9 20.3-10.4-33zm-63.6-63.9 27.9-20.7h-35L91.9 74.3 81 107.6H46L74.4 128l-10.9 33.2L92.1 141l27.8 20.4zm-64-64 27.9-20.7h-35L27.9 10.3 17 43.6h-35L10.4 64l-11 33.3L28.1 77l27.8 20.4zm-64-64L9.4-20.3h-35l-10.7-33.3L-47-20.4h-35L-53.7 0l-10.8 33.2L-35.9 13l27.8 20.4z"/>   </g>  
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 640 480"
-  >
-    {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
-    {/if}
-         <defs>     <clipPath id="ba-a">       <path fill-opacity=".7" d="M-85.3 0h682.6v512H-85.3z"/>     </clipPath>   </defs>   <g fill-rule="evenodd" clip-path="url(#ba-a)" transform="translate(80)scale(.9375)">     <path fill="#009" d="M-85.3 0h682.6v512H-85.3z"/>     <path fill="#FC0" d="m56.5 0 511 512.3V.3z"/>     <path fill="#FFF" d="M439.9 481.5 412 461.2l-28.6 20.2 10.8-33.2-28.2-20.5h35l10.8-33.2 10.7 33.3h35l-28 20.7zm81.3 10.4-35-.1-10.7-33.3-10.8 33.2h-35l28.2 20.5-10.8 33.2 28.6-20.2 28 20.3-10.5-33zM365.6 384.7l28-20.7-35-.1-10.7-33.2-10.8 33.2-35-.1 28.2 20.5-10.8 33.3 28.6-20.3 28 20.4zm-64.3-64.5 28-20.6-35-.1-10.7-33.3-10.9 33.2h-34.9l28.2 20.5-10.8 33.2 28.6-20.2 27.9 20.3zm-63.7-63.6 28-20.7h-35L220 202.5l-10.8 33.2h-35l28.2 20.4-10.8 33.3 28.6-20.3 28 20.4-10.5-33zm-64.4-64.3 28-20.6-35-.1-10.7-33.3-10.9 33.2h-34.9L138 192l-10.8 33.2 28.6-20.2 27.9 20.3-10.4-33zm-63.6-63.9 27.9-20.7h-35L91.9 74.3 81 107.6H46L74.4 128l-10.9 33.2L92.1 141l27.8 20.4zm-64-64 27.9-20.7h-35L27.9 10.3 17 43.6h-35L10.4 64l-11 33.3L28.1 77l27.8 20.4zm-64-64L9.4-20.3h-35l-10.7-33.3L-47-20.4h-35L-53.7 0l-10.8 33.2L-35.9 13l27.8 20.4z"/>   </g>  
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 640 480"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <defs>
+    <clipPath id="ba-a"> <path fill-opacity=".7" d="M-85.3 0h682.6v512H-85.3z" /> </clipPath>
+  </defs>
+  <g fill-rule="evenodd" clip-path="url(#ba-a)" transform="translate(80)scale(.9375)">
+    <path fill="#009" d="M-85.3 0h682.6v512H-85.3z" />
+    <path fill="#FC0" d="m56.5 0 511 512.3V.3z" />
+    <path
+      fill="#FFF"
+      d="M439.9 481.5 412 461.2l-28.6 20.2 10.8-33.2-28.2-20.5h35l10.8-33.2 10.7 33.3h35l-28 20.7zm81.3 10.4-35-.1-10.7-33.3-10.8 33.2h-35l28.2 20.5-10.8 33.2 28.6-20.2 28 20.3-10.5-33zM365.6 384.7l28-20.7-35-.1-10.7-33.2-10.8 33.2-35-.1 28.2 20.5-10.8 33.3 28.6-20.3 28 20.4zm-64.3-64.5 28-20.6-35-.1-10.7-33.3-10.9 33.2h-34.9l28.2 20.5-10.8 33.2 28.6-20.2 27.9 20.3zm-63.7-63.6 28-20.7h-35L220 202.5l-10.8 33.2h-35l28.2 20.4-10.8 33.3 28.6-20.3 28 20.4-10.5-33zm-64.4-64.3 28-20.6-35-.1-10.7-33.3-10.9 33.2h-34.9L138 192l-10.8 33.2 28.6-20.2 27.9 20.3-10.4-33zm-63.6-63.9 27.9-20.7h-35L91.9 74.3 81 107.6H46L74.4 128l-10.9 33.2L92.1 141l27.8 20.4zm-64-64 27.9-20.7h-35L27.9 10.3 17 43.6h-35L10.4 64l-11 33.3L28.1 77l27.8 20.4zm-64-64L9.4-20.3h-35l-10.7-33.3L-47-20.4h-35L-53.7 0l-10.8 33.2L-35.9 13l27.8 20.4z"
+    />
+  </g>
+</svg>
 
 <!--
 @component
@@ -94,13 +70,8 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "ba"
-@prop onclick
-@prop onkeydown
-@prop onkeyup
+@prop ariaLabel = 'ba'
 @prop ...restProps
 -->

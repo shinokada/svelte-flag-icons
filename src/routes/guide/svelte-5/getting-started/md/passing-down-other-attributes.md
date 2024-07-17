@@ -1,1 +1,1 @@
-<Accessibility id="my-svg" transform="rotate(45)" />
+<Jp id="my-svg" transform="rotate(45)" />

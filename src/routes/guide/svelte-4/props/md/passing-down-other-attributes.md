@@ -1,1 +1,1 @@
-<AdminLineUserFaces id="my-svg" transform="rotate(45)" />
+<Us id="my-svg" transform="rotate(45)" />

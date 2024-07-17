@@ -1,5 +1,5 @@
-<AdminLineUserFaces size="30" class="text-red-700 dark:text-green-300 inline m-1" />
+<Us size="30" class="inline m-4" />
 
-<div class="text-red-700 dark:text-green-300 inline m-1">
-  <AdminLineUserFaces size="30" />
+<div class="inline m-4">
+  <Us size="30" />
 </div>

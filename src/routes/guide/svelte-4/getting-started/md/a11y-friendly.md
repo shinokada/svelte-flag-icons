@@ -1,4 +1,3 @@
-<AdminLineUserFaces
-  ariaLabel="blue admin user svg icon with face"
-  color="blue"
+<Us
+  ariaLabel="American flag, 13 stripes, 50 stars"
 />

@@ -1,5 +1,5 @@
-<Accessibility size="30" class="text-red-700 dark:text-green-300 inline m-1" />
+<Jp size="30" class="inline m-4" />
 
-<div class="text-red-700 dark:text-green-300 inline m-1">
-  <Accessibility size="30" />
+<div class="inline m-4">
+  <Jp size="30" />
 </div>

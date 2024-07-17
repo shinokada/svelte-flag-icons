@@ -1,2 +1,2 @@
-<AdminLineUserFaces color="#ff0000" />
-<AdminLineUserFaces color="yellow" />
+<Us color="#ff0000" />
+<Us color="yellow" />

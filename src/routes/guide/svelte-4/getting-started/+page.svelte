@@ -1,5 +1,12 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3, removeHyphensAndCapitalize } from 'runes-webkit';
+  import {
+    HighlightCompo,
+    CodeWrapper,
+    Code,
+    H2,
+    H3,
+    removeHyphensAndCapitalize
+  } from 'runes-webkit';
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -21,7 +28,10 @@
     ><img src="https://img.shields.io/npm/v/svelte-flag-icons" alt="npm" /></a
   >
   <a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"
-    ><img src="https://img.shields.io/github/license/shinokada/svelte-flag-icons" alt="License" /></a
+    ><img
+      src="https://img.shields.io/github/license/shinokada/svelte-flag-icons"
+      alt="License"
+    /></a
   >
   <a href="https://www.npmjs.com/package/svelte-flag-icons" rel="nofollow" target="_blank"
     ><img src="https://img.shields.io/npm/dw/svelte-flag-icons.svg" alt="npm" /></a

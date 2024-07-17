@@ -1,5 +1,5 @@
 <script>
-  import { Accessibility } from 'svelte-flag-icons';
+  import { Jp } from 'svelte-flag-icons';
 </script>
 
-<Accessibility />
+<Jp />

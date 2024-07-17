@@ -1,1 +1,1 @@
-<Accessibility class="h-24 w-24" />
+<Jp class="h-24 w-24" />
