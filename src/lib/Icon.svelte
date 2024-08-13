@@ -12,3 +12,14 @@
 </script>
 
 <Icon {...restProps} {role} {size} aria-label={ariaLabel} />
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop Icon
+@prop size = '24'
+@prop role = 'img'
+@prop ariaLabel = 'Icon'
+@prop ...restProps
+-->

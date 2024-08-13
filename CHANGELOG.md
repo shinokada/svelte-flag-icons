@@ -1,5 +1,11 @@
 # svelte-flag-icons
 
+## 2.0.0-next.4
+
+### Patch Changes
+
+- fix: remove svelte:component from Icon.svelte ([`94f8c84f02475dfa72287ad6d4c0a24de54c085a`](https://github.com/shinokada/svelte-flag-icons/commit/94f8c84f02475dfa72287ad6d4c0a24de54c085a))
+
 ## 2.0.0-next.3
 
 ### Patch Changes

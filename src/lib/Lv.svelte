@@ -54,3 +54,14 @@
        <g fill-rule="evenodd">     <path fill="#fff" d="M0 0h640v480H0z"/>     <path fill="#981e32" d="M0 0h640v192H0zm0 288h640v192H0z"/>   </g>  
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "lv"
+@prop ...restProps
+-->

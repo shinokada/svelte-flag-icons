@@ -4,5 +4,10 @@
   "initialVersions": {
     "svelte-flag-icons": "2.0.0-next.0"
   },
-  "changesets": ["dull-dolphins-double", "shiny-baboons-return", "swift-jokes-tap"]
+  "changesets": [
+    "dull-dolphins-double",
+    "empty-news-fetch",
+    "shiny-baboons-return",
+    "swift-jokes-tap"
+  ]
 }

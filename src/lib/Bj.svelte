@@ -54,3 +54,14 @@
        <defs>     <clipPath id="bj-a">       <path fill="gray" d="M67.6-154h666v666h-666z"/>     </clipPath>   </defs>   <g clip-path="url(#bj-a)" transform="matrix(.961 0 0 .7207 -65 111)">     <g fill-rule="evenodd" stroke-width="1pt">       <path fill="#319400" d="M0-154h333v666H0z"/>       <path fill="#ffd600" d="M333-154h666v333H333z"/>       <path fill="#de2110" d="M333 179h666v333H333z"/>     </g>   </g>  
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel =  "bj"
+@prop ...restProps
+-->
