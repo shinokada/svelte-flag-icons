@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Ad } from '$lib';
+  import { Ad } from 'svelte-flag-icons';
   import MyIcon from './MyIcon.svelte'
 </script>
 
