@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { Icon as FlagIcon } from 'svelte-flag-icons';
+  import { Icon as FlagIcon } from '$lib';
   import { type Component } from 'svelte';
-  const config: { size: string, ariaLabel: string } = {
+  const config: { size: string, ariaLabel: string, class: string } = {
     size: "100",
     ariaLabel: "my custom icon",
+    class: 'mx-4'
   };
   interface Props {
     Icon: Component

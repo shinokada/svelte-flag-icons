@@ -11,7 +11,7 @@
   let { Icon, size = '24', role = 'img', ariaLabel = 'Icon', ...restProps }: Props = $props();
 </script>
 
-<Icon {...restProps} {role} {size} aria-label={ariaLabel} />
+<Icon {...restProps} {role} {size} {ariaLabel} />
 
 <!--
 @component
