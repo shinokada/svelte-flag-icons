@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
   import type { SVGAttributes } from 'svelte/elements';
 
@@ -16,19 +16,19 @@
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    title,
-    desc,
-    ariaLabel = 'bj',
-    ...restProps
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    title, 
+    desc, 
+    ariaLabel =  "bj" , 
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,29 +46,11 @@
   viewBox="0 0 640 480"
 >
   {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
+    <title id="{title.id}">{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
+    <desc id="{desc.id}">{desc.desc}</desc>
   {/if}
-  <defs> <clipPath id="bj-a"> <path fill="gray" d="M67.6-154h666v666h-666z" /> </clipPath> </defs>
-  <g clip-path="url(#bj-a)" transform="matrix(.961 0 0 .7207 -65 111)">
-    <g fill-rule="evenodd" stroke-width="1pt">
-      <path fill="#319400" d="M0-154h333v666H0z" />
-      <path fill="#ffd600" d="M333-154h666v333H333z" />
-      <path fill="#de2110" d="M333 179h666v333H333z" />
-    </g>
-  </g>
+       <defs>     <clipPath id="bj-a">       <path fill="gray" d="M67.6-154h666v666h-666z"/>     </clipPath>   </defs>   <g clip-path="url(#bj-a)" transform="matrix(.961 0 0 .7207 -65 111)">     <g fill-rule="evenodd" stroke-width="1pt">       <path fill="#319400" d="M0-154h333v666H0z"/>       <path fill="#ffd600" d="M333-154h666v333H333z"/>       <path fill="#de2110" d="M333 179h666v333H333z"/>     </g>   </g>  
 </svg>
 
-<!--
-@component
-[Go to docs](https://svelte-flag-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel = 'bj'
-@prop ...restProps
--->
