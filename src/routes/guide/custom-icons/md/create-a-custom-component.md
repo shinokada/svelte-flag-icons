@@ -5,7 +5,7 @@
     color: '#FF5733'
   };
   import { Icon } from 'svelte-flag-icons';
-  export let icon: Component;
+  export let Icon: Component;
 </script>
 
 <Icon {...config} {icon} />
