@@ -220,7 +220,7 @@
   <Sidebar
     sidebarList={newSidebarList}
     asideClass="w-60 p-0 border-none mx-2 mt-20 !important"
-    divClass="dark_bg_theme"
+    divClass="dark_bg_theme bg-white"
     sidebarClose={closeNavDrawer}
   />
 </Drawer>
