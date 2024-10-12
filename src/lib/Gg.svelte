@@ -40,3 +40,15 @@
   <use xlink:href="#gg-a" width="36" height="24" transform="rotate(-90 320 240)" />
   <use xlink:href="#gg-a" width="36" height="24" transform="rotate(180 320 240)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'gg'
+@prop ...restProps
+-->

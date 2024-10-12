@@ -47,3 +47,15 @@
   <use xlink:href="#hn-c" width="100%" height="100%" transform="translate(-133.3 -42.7)" />
   <use xlink:href="#hn-c" width="100%" height="100%" transform="translate(-133.3 37.3)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'hn'
+@prop ...restProps
+-->

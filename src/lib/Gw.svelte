@@ -43,3 +43,15 @@
   <use xlink:href="#gw-b" width="100%" height="100%" transform="rotate(-144 110 240)" />
   <use xlink:href="#gw-b" width="100%" height="100%" transform="rotate(-72 110 240)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'gw'
+@prop ...restProps
+-->

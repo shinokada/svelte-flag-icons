@@ -2031,3 +2031,15 @@
   /> <path fill="none" stroke="#000" stroke-width=".2" d="M272.6 216.6v-.2" />
   <path fill="none" d="M279.1 217v-1m-.6 1v-1m-.4 1.1V216" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'es'
+@prop ...restProps
+-->

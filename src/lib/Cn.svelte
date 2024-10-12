@@ -61,3 +61,15 @@
     transform="matrix(14.9991 -18.73557 18.73533 14.99929 240 216)"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'cn'
+@prop ...restProps
+-->

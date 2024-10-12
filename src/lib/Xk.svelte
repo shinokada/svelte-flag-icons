@@ -43,3 +43,15 @@
     d="M351.9 73.4 368 123l-42.2-30.7H378L335.8 123zm62.8 11.1 16 49.6-42.1-30.7h52.1l-42.2 30.7zm59.9 21.8 16 49.6-42.1-30.7h52.1L458.4 156l16.2-49.6zM288.1 73.4 272 123l42.2-30.7H262l42.2 30.7zm-62.8 11.1-16 49.6 42.1-30.7h-52.1l42.2 30.7zm-59.6 21.8 16.2 49.6-42.2-30.7h52.1l-42.2 30.7z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'xk'
+@prop ...restProps
+-->

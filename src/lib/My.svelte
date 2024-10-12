@@ -48,3 +48,15 @@
     />
   </g> <defs> <clipPath id="my-a"> <path fill="#fff" d="M0 0h640v480H0z" /> </clipPath> </defs>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'my'
+@prop ...restProps
+-->

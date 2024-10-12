@@ -77,3 +77,15 @@
     <circle cx="180" cy="120" r="45.1" fill="#fff" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'tw'
+@prop ...restProps
+-->

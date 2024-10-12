@@ -1629,3 +1629,15 @@
     /> <path fill-rule="evenodd" d="m348.7 300.3 3.8 8-1.6.7-3-6.5-2.4 1-.6-1.3z" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'sv'
+@prop ...restProps
+-->

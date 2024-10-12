@@ -43,3 +43,15 @@
   <use xlink:href="#hk-a" transform="rotate(216 312.5 243.5)" />
   <use xlink:href="#hk-a" transform="rotate(288 312.5 243.5)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'hk'
+@prop ...restProps
+-->

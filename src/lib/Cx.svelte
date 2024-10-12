@@ -55,3 +55,15 @@
     <use xlink:href="#cx-a" width="100%" height="100%" x="108.4" y="85" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'cx'
+@prop ...restProps
+-->

@@ -344,3 +344,15 @@
   /> <ellipse cx="-339.4" cy="121.5" fill="#d4af3a" rx="1.6" ry="1.5" transform="scale(-1 1)" />
   <path fill="#d4af3a" d="M335.8 113c.7-.2 1.5.2 1.9.8.3.6 0 1.2-1 1.4-1.7.3-2.5-1.8-1-2.2z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'me'
+@prop ...restProps
+-->

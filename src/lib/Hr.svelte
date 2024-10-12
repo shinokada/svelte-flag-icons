@@ -177,3 +177,15 @@
     d="m400.6 103 3.5-3 4.4 1.4zm8.5-1.7 3.4-3 4.4 1.5zm7.8-1.3-3.4 3-4.4-1.5zm-8.4 1.6-3.5 3-4.3-1.5zm-5-6.4 4.3 1.4.8 4.6zm5.5 6.4 4.4 1.5.9 4.5zm5.1 6.1-4.3-1.5-.9-4.5zm-5.6-6.4-4.3-1.5-.9-4.5zm3-7.7 1 4.6-3.5 3zm-2.7 8.1.8 4.6-3.4 3zm-2.8 7.5-.9-4.5 3.5-3zm2.8-8-.9-4.6 3.5-3z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'hr'
+@prop ...restProps
+-->

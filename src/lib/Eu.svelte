@@ -56,3 +56,15 @@
     </g> <use xlink:href="#eu-e" width="100%" height="100%" transform="scale(-1 1)" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'eu'
+@prop ...restProps
+-->

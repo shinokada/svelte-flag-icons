@@ -64,3 +64,15 @@
     <use xlink:href="#cc-b" width="100%" height="100%" x="8064" y="2730" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'cc'
+@prop ...restProps
+-->

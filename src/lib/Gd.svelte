@@ -65,3 +65,15 @@
   <use xlink:href="#gd-c" width="100%" height="100%" transform="translate(320 448.2)scale(31.2)" />
   <use xlink:href="#gd-d" width="100%" height="100%" x="100" transform="translate(30.3 414.6)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'gd'
+@prop ...restProps
+-->

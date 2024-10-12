@@ -1,5 +1,11 @@
 # svelte-flag-icons
 
+## 2.0.0-next.5
+
+### Patch Changes
+
+- types: create types.ts ([`1786c7775ce42d7ecda87f155a312750d784d940`](https://github.com/shinokada/svelte-flag-icons/commit/1786c7775ce42d7ecda87f155a312750d784d940))
+
 ## 2.0.0-next.4
 
 ### Patch Changes

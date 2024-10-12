@@ -447,3 +447,15 @@
     d="M366 205.1v53c0 10.6-1.4 52.6-46.5 69-45.3-16.4-46.7-58.4-46.7-69v-53H366"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'bz'
+@prop ...restProps
+-->

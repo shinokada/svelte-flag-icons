@@ -46,3 +46,15 @@
     />
   </g> <use xlink:href="#mo-a" width="100%" height="100%" transform="matrix(-1 0 0 1 640 0)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'mo'
+@prop ...restProps
+-->

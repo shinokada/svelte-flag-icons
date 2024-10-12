@@ -88,3 +88,15 @@
     /> <path fill="#de2010" fill-rule="evenodd" d="M-40 360h720v120H-40zm0-360h720v120H-40z" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'pf'
+@prop ...restProps
+-->

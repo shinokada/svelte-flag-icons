@@ -38,3 +38,15 @@
   <path fill="#0f47af" d="m0 0 415.7 240L0 480z" />
   <path fill="#fcdd09" d="M200.7 194.8 61.7 240l139 45.1L114.9 167v146z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'ss'
+@prop ...restProps
+-->

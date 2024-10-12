@@ -46,3 +46,15 @@
     /> <path stroke-linejoin="round" d="m182.3 101.3 9.3 1.7s-6.5 8.8-9.3-1.7z" />
   </g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop ariaLabel = 'gb wls'
+@prop ...restProps
+-->
