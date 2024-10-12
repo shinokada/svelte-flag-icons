@@ -1,34 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: string;
-    role?: string;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc, 
-    ariaLabel =  "uz" , 
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'uz',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,22 +28,31 @@
   viewBox="0 0 640 480"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-       <path fill="#1eb53a" d="M0 320h640v160H0z"/>   <path fill="#0099b5" d="M0 0h640v160H0z"/>   <path fill="#ce1126" d="M0 153.6h640v172.8H0z"/>   <path fill="#fff" d="M0 163.2h640v153.6H0z"/>   <circle cx="134.4" cy="76.8" r="57.6" fill="#fff"/>   <circle cx="153.6" cy="76.8" r="57.6" fill="#0099b5"/>   <g fill="#fff" transform="translate(261.1 122.9)scale(1.92)">     <g id="uz-e">       <g id="uz-d">         <g id="uz-c">           <g id="uz-b">             <path id="uz-a" d="M0-6-1.9-.3 1 .7"/>             <use xlink:href="#uz-a" width="100%" height="100%" transform="scale(-1 1)"/>           </g>           <use xlink:href="#uz-b" width="100%" height="100%" transform="rotate(72)"/>         </g>         <use xlink:href="#uz-b" width="100%" height="100%" transform="rotate(-72)"/>         <use xlink:href="#uz-c" width="100%" height="100%" transform="rotate(144)"/>       </g>       <use xlink:href="#uz-d" width="100%" height="100%" y="-24"/>       <use xlink:href="#uz-d" width="100%" height="100%" y="-48"/>     </g>     <use xlink:href="#uz-e" width="100%" height="100%" x="24"/>     <use xlink:href="#uz-e" width="100%" height="100%" x="48"/>     <use xlink:href="#uz-d" width="100%" height="100%" x="-48"/>     <use xlink:href="#uz-d" width="100%" height="100%" x="-24"/>     <use xlink:href="#uz-d" width="100%" height="100%" x="-24" y="-24"/>   </g>  
+  <path fill="#1eb53a" d="M0 320h640v160H0z" /> <path fill="#0099b5" d="M0 0h640v160H0z" />
+  <path fill="#ce1126" d="M0 153.6h640v172.8H0z" /> <path fill="#fff" d="M0 163.2h640v153.6H0z" />
+  <circle cx="134.4" cy="76.8" r="57.6" fill="#fff" />
+  <circle cx="153.6" cy="76.8" r="57.6" fill="#0099b5" />
+  <g fill="#fff" transform="translate(261.1 122.9)scale(1.92)">
+    <g id="uz-e">
+      <g id="uz-d">
+        <g id="uz-c">
+          <g id="uz-b">
+            <path id="uz-a" d="M0-6-1.9-.3 1 .7" />
+            <use xlink:href="#uz-a" width="100%" height="100%" transform="scale(-1 1)" />
+          </g> <use xlink:href="#uz-b" width="100%" height="100%" transform="rotate(72)" />
+        </g> <use xlink:href="#uz-b" width="100%" height="100%" transform="rotate(-72)" />
+        <use xlink:href="#uz-c" width="100%" height="100%" transform="rotate(144)" />
+      </g> <use xlink:href="#uz-d" width="100%" height="100%" y="-24" />
+      <use xlink:href="#uz-d" width="100%" height="100%" y="-48" />
+    </g> <use xlink:href="#uz-e" width="100%" height="100%" x="24" />
+    <use xlink:href="#uz-e" width="100%" height="100%" x="48" />
+    <use xlink:href="#uz-d" width="100%" height="100%" x="-48" />
+    <use xlink:href="#uz-d" width="100%" height="100%" x="-24" />
+    <use xlink:href="#uz-d" width="100%" height="100%" x="-24" y="-24" />
+  </g>
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flag-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel =  "uz"
-@prop ...restProps
--->

@@ -1,34 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: string;
-    role?: string;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc, 
-    ariaLabel =  "jp" , 
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'jp',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,22 +28,22 @@
   viewBox="0 0 640 480"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-       <defs>     <clipPath id="jp-a">       <path fill-opacity=".7" d="M-88 32h640v480H-88z"/>     </clipPath>   </defs>   <g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#jp-a)" transform="translate(88 -32)">     <path fill="#fff" d="M-128 32h720v480h-720z"/>     <circle cx="523.1" cy="344.1" r="194.9" fill="#bc002d" transform="translate(-168.4 8.6)scale(.76554)"/>   </g>  
+  <defs>
+    <clipPath id="jp-a"> <path fill-opacity=".7" d="M-88 32h640v480H-88z" /> </clipPath>
+  </defs>
+  <g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#jp-a)" transform="translate(88 -32)">
+    <path fill="#fff" d="M-128 32h720v480h-720z" />
+    <circle
+      cx="523.1"
+      cy="344.1"
+      r="194.9"
+      fill="#bc002d"
+      transform="translate(-168.4 8.6)scale(.76554)"
+    />
+  </g>
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flag-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel =  "jp"
-@prop ...restProps
--->

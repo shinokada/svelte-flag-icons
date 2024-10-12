@@ -1,34 +1,16 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement> {
-    size?: string;
-    role?: string;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc, 
-    ariaLabel =  "pl" , 
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    title,
+    desc,
+    ariaLabel = 'pl',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -46,22 +28,12 @@
   viewBox="0 0 640 480"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-       <g fill-rule="evenodd">     <path fill="#fff" d="M640 480H0V0h640z"/>     <path fill="#dc143c" d="M640 480H0V240h640z"/>   </g>  
+  <g fill-rule="evenodd">
+    <path fill="#fff" d="M640 480H0V0h640z" /> <path fill="#dc143c" d="M640 480H0V240h640z" />
+  </g>
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-flag-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop title
-@prop desc
-@prop ariaLabel =  "pl"
-@prop ...restProps
--->
