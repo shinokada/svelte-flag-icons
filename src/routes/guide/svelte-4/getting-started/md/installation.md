@@ -1,3 +1,3 @@
-npm create svelte@latest my-project
-cd my-project
-pnpm i -D svelte-flag-icons
+npm create svelte@latest myapp
+cd myapp
+pnpm i -D svelte-flag-icons@v1-latest
