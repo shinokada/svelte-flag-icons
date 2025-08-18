@@ -57,10 +57,10 @@
 	const hasPath = (key: string) => currentUrl.includes(key);
 
 	const lis: LiType[] = [
-    { name: 'Guide', href: '/guide/svelte-5/getting-started' },
-    { name: 'Flags', href: '/flags' },
-    { name: 'Icon Sets', href: 'https://svelte-svg-icons.codewithshin.com/' }
-  ];
+		{ name: 'Guide', href: '/guide/svelte-5/getting-started' },
+		{ name: 'Flags', href: '/flags' },
+		{ name: 'Icon Sets', href: 'https://svelte-svg-icons.codewithshin.com/' }
+	];
 
 	const brand = {
 		name: 'codewithshin.com',

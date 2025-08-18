@@ -1,51 +1,51 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
-  import type { BaseProps, Props } from './types';
+	import { getContext } from 'svelte';
+	import type { BaseProps, Props } from './types';
 
-  const ctx: BaseProps = getContext('iconCtx') ?? {};
+	const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    title,
-    desc,
-    ariaLabel = 'jp',
-    ...restProps
-  }: Props = $props();
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		title,
+		desc,
+		ariaLabel = 'jp',
+		...restProps
+	}: Props = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 640 480"
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	aria-label={ariaLabel}
+	aria-describedby={hasDescription ? ariaDescribedby : undefined}
+	viewBox="0 0 640 480"
 >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  <defs>
-    <clipPath id="jp-a"> <path fill-opacity=".7" d="M-88 32h640v480H-88z" /> </clipPath>
-  </defs>
-  <g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#jp-a)" transform="translate(88 -32)">
-    <path fill="#fff" d="M-128 32h720v480h-720z" />
-    <circle
-      cx="523.1"
-      cy="344.1"
-      r="194.9"
-      fill="#bc002d"
-      transform="translate(-168.4 8.6)scale(.76554)"
-    />
-  </g>
+	{#if title?.id && title.title}
+		<title id={title.id}>{title.title}</title>
+	{/if}
+	{#if desc?.id && desc.desc}
+		<desc id={desc.id}>{desc.desc}</desc>
+	{/if}
+	<defs>
+		<clipPath id="jp-a"> <path fill-opacity=".7" d="M-88 32h640v480H-88z" /> </clipPath>
+	</defs>
+	<g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#jp-a)" transform="translate(88 -32)">
+		<path fill="#fff" d="M-128 32h720v480h-720z" />
+		<circle
+			cx="523.1"
+			cy="344.1"
+			r="194.9"
+			fill="#bc002d"
+			transform="translate(-168.4 8.6)scale(.76554)"
+		/>
+	</g>
 </svg>
 
 <!--

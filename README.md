@@ -24,6 +24,7 @@ See the [Svelte Flag Icons documentation](https://svelte-flag-icons.codewithshin
 [GitHub Repo](https://github.com/shinokada/svelte-flag-icons)
 
 ## Installation
+
 ### Svelte 5 or later
 
 ```sh

@@ -12,4 +12,5 @@
 
   let { Icon }: Props = $props();
 </script>
+
 <FlagIcon {...config} {Icon} />

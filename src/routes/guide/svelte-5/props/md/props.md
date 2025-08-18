@@ -1,7 +1,7 @@
-- size = ctx.size || '24' 
+- size = ctx.size || '24'
 - role = ctx.role || 'img'
-- color = ctx.color || 'currentColor' 
+- color = ctx.color || 'currentColor'
 - title
 - desc
-- ariaLabel =  "accessibility"
-- ...restProps (class, id, name, role, and all other props from SVGAttributes) 
+- ariaLabel = "accessibility"
+- ...restProps (class, id, name, role, and all other props from SVGAttributes)
