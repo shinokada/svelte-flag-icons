@@ -39,27 +39,12 @@ const pages: Page[] = [
 		priority: '0.5'
 	},
 	{
-		loc: 'how-to-use',
+		loc: 'guide/svelte-5/props',
 		changefreq: 'weekly',
 		priority: '0.5'
 	},
 	{
-		loc: 'no-tabs',
-		changefreq: 'weekly',
-		priority: '0.5'
-	},
-	{
-		loc: 'quick-start',
-		changefreq: 'weekly',
-		priority: '0.5'
-	},
-	{
-		loc: 'three-tabs',
-		changefreq: 'weekly',
-		priority: '0.5'
-	},
-	{
-		loc: 'three-tabs-sizebytailwind',
+		loc: 'flags',
 		changefreq: 'weekly',
 		priority: '0.5'
 	}
