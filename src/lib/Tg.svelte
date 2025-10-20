@@ -9,11 +9,12 @@
 		role = ctx.role || 'img',
 		title,
 		desc,
-		ariaLabel = 'tg',
+		focusable = 'false',
+		ariaLabel,
 		...restProps
 	}: Props = $props();
 
-	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
 	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -23,7 +24,9 @@
 	{role}
 	width={size}
 	height={size}
-	aria-label={ariaLabel}
+	{focusable}
+	aria-label={title?.id ? undefined : ariaLabel}
+	aria-labelledby={title?.id || undefined}
 	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	viewBox="0 0 640 480"
 >
@@ -40,7 +43,7 @@
 		<path fill="#d80000" d="M0 .3h306.5v310.6H0z" />
 		<path
 			fill="#fff"
-			d="M134.4 128.4c0-.8 18.9-53 18.9-53l17 52.2s57.4 1.7 57.4.8-45.3 34.3-45.3 34.3 21.4 60 20.5 58.2c-.8-1.7-49.6-36-49.6-36s-49.7 34.3-48.8 34.3c.8 0 18.8-56.5 18.8-56.5l-44.5-33.4z"
+			d="M134.4 128.4c0-.8 18.9-53 18.9-53l17 52.2s57.4 1.7 57.4.8-45.3 34.3-45.3 34.3 21.4 60 20.5 58.2-49.6-36-49.6-36-49.7 34.3-48.8 34.3c.8 0 18.8-56.5 18.8-56.5l-44.5-33.4z"
 		/> <path fill="#118600" d="M0 409.2h767.6V512H0z" />
 	</g>
 </svg>
@@ -53,6 +56,7 @@
 @prop role = ctx.role || 'img'
 @prop title
 @prop desc
-@prop ariaLabel = 'tg'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

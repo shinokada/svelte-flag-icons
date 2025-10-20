@@ -9,11 +9,12 @@
 		role = ctx.role || 'img',
 		title,
 		desc,
-		ariaLabel = 'kp',
+		focusable = 'false',
+		ariaLabel,
 		...restProps
 	}: Props = $props();
 
-	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
 	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -23,7 +24,9 @@
 	{role}
 	width={size}
 	height={size}
-	aria-label={ariaLabel}
+	{focusable}
+	aria-label={title?.id ? undefined : ariaLabel}
+	aria-labelledby={title?.id || undefined}
 	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	viewBox="0 0 640 480"
 >
@@ -43,7 +46,7 @@
 		<path fill="#3e5698" d="M776 .6H-76V93h852z" />
 		<path
 			fill="#fff"
-			d="M328.5 256c0 63.5-53 115-118.6 115S91.3 319.5 91.3 256s53-114.8 118.6-114.8c65.5 0 118.6 51.4 118.6 114.9z"
+			d="M328.5 256c0 63.5-53 115-118.6 115S91.3 319.5 91.3 256s53-114.8 118.6-114.8 118.6 51.4 118.6 114.9z"
 		/>
 		<path
 			fill="#c40000"
@@ -60,6 +63,7 @@
 @prop role = ctx.role || 'img'
 @prop title
 @prop desc
-@prop ariaLabel = 'kp'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

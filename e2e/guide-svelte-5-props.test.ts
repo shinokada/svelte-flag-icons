@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
-const title = 'Props - Svelte Flag Icons v2';
-const description = 'How to use Svelte Flag Icons v2 props';
+const title = 'Props - Svelte Flag Icons v3';
+const description = 'How to use Svelte Flag Icons v3 props';
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-flag-icons';
 
 test.beforeEach(async ({ page }) => {

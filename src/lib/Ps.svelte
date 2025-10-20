@@ -9,11 +9,12 @@
 		role = ctx.role || 'img',
 		title,
 		desc,
-		ariaLabel = 'ps',
+		focusable = 'false',
+		ariaLabel,
 		...restProps
 	}: Props = $props();
 
-	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
 	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -23,7 +24,9 @@
 	{role}
 	width={size}
 	height={size}
-	aria-label={ariaLabel}
+	{focusable}
+	aria-label={title?.id ? undefined : ariaLabel}
+	aria-labelledby={title?.id || undefined}
 	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	viewBox="0 0 640 480"
 >
@@ -33,17 +36,8 @@
 	{#if desc?.id && desc.desc}
 		<desc id={desc.id}>{desc.desc}</desc>
 	{/if}
-	<defs>
-		<clipPath id="ps-a"> <path fill-opacity=".7" d="M-118 0h682.7v512H-118z" /> </clipPath>
-	</defs>
-	<g clip-path="url(#ps-a)" transform="translate(110.6)scale(.9375)">
-		<g fill-rule="evenodd" stroke-width="1pt">
-			<path fill="#000001" d="M-246 0H778v170.7H-246z" />
-			<path fill="#fff" d="M-246 170.7H778v170.6H-246z" />
-			<path fill="#090" d="M-246 341.3H778V512H-246z" />
-			<path fill="red" d="m-246 512 512-256L-246 0z" />
-		</g>
-	</g>
+	<path fill="#009639" d="M0 0h640v480H0z" /> <path fill="#fff" d="M0 0h640v320H0z" />
+	<path d="M0 0h640v160H0z" /> <path fill="#ed2e38" d="m0 0 320 240L0 480Z" />
 </svg>
 
 <!--
@@ -54,6 +48,7 @@
 @prop role = ctx.role || 'img'
 @prop title
 @prop desc
-@prop ariaLabel = 'ps'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

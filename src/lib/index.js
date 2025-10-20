@@ -10,6 +10,7 @@ export { default as Aq } from './Aq.svelte';
 export { default as Ar } from './Ar.svelte';
 export { default as Arab } from './Arab.svelte';
 export { default as As } from './As.svelte';
+export { default as Asean } from './Asean.svelte';
 export { default as At } from './At.svelte';
 export { default as Au } from './Au.svelte';
 export { default as Aw } from './Aw.svelte';

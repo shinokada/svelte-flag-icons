@@ -1,6 +1,6 @@
 {
   "name": "svelte-flag-icons",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Flag icon components for Sveltejs",
   "license": "MIT",
   "homepage": "https://svelte-flag-icons.codewithshin.com/",
@@ -24,7 +24,8 @@
   "contributors": [
     {
       "name": "lipis/flag-icons",
-      "url": "https://github.com/lipis/flag-icons"
+      "url": "https://github.com/lipis/flag-icons",
+      "iconVersion": "7.5.0"
     }
   ],
   "scripts": {
@@ -113,6 +114,11 @@
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
     },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "default": "./dist/types.js"
+    },
     "./Ad.svelte": {
       "types": "./dist/Ad.svelte.d.ts",
       "svelte": "./dist/Ad.svelte"
@@ -160,6 +166,10 @@
     "./As.svelte": {
       "types": "./dist/As.svelte.d.ts",
       "svelte": "./dist/As.svelte"
+    },
+    "./Asean.svelte": {
+      "types": "./dist/Asean.svelte.d.ts",
+      "svelte": "./dist/Asean.svelte"
     },
     "./At.svelte": {
       "types": "./dist/At.svelte.d.ts",

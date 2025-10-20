@@ -9,11 +9,12 @@
 		role = ctx.role || 'img',
 		title,
 		desc,
-		ariaLabel = 'gd',
+		focusable = 'false',
+		ariaLabel,
 		...restProps
 	}: Props = $props();
 
-	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
 	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -23,7 +24,9 @@
 	{role}
 	width={size}
 	height={size}
-	aria-label={ariaLabel}
+	{focusable}
+	aria-label={title?.id ? undefined : ariaLabel}
+	aria-labelledby={title?.id || undefined}
 	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	viewBox="0 0 640 480"
 >
@@ -56,10 +59,10 @@
 		height="100%"
 		transform="translate(320 33.6)scale(31.2)"
 	/> <use xlink:href="#gd-d" width="100%" height="100%" x="100" transform="translate(30.3)" />
-	<path fill="#ce1126" d="M102.3 240.7a80.4 80.4 0 0 0 33.5 33.2 111 111 0 0 0-11.3-45z" />
+	<path fill="#ce1126" d="M102.3 240.7a80 80 0 0 0 33.5 33.2 111 111 0 0 0-11.3-45z" />
 	<path
 		fill="#fcd116"
-		d="M90.1 194.7c10.4 21.7-27.1 73.7 35.5 85.9a63.2 63.2 0 0 1-10.9-41.9 70 70 0 0 1 32.5 30.8c16.4-59.5-42-55.8-57.1-74.8"
+		d="M90.1 194.7c10.4 21.7-27.1 73.7 35.5 85.9a63 63 0 0 1-10.9-41.9 70 70 0 0 1 32.5 30.8c16.4-59.5-42-55.8-57.1-74.8"
 	/>
 	<use xlink:href="#gd-d" width="100%" height="100%" x="-100" transform="translate(-30.3 414.6)" />
 	<use xlink:href="#gd-c" width="100%" height="100%" transform="translate(320 448.2)scale(31.2)" />
@@ -74,6 +77,7 @@
 @prop role = ctx.role || 'img'
 @prop title
 @prop desc
-@prop ariaLabel = 'gd'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->
