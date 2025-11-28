@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { HighlightCompo, Code, H2, H3 } from 'runes-webkit';
+	import { Code, H2, H3 } from 'runes-webkit';
+	import { HighlightCompo } from 'svelte-rune-highlight';
 
 	const modules = import.meta.glob('./md/*.md', {
 		query: '?raw',
@@ -12,7 +13,7 @@
 
 <H2>Prop</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/props.md'] as string} />
 
 <H2>Size</H2>
 
@@ -20,14 +21,14 @@
 	To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/size.md'] as string} />
 
 <p>
 	If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by
 	including the desired classes in the <Code>class</Code> prop. For example:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/size-2.md'] as string} />
 
 <H2>CSS framework</H2>
 
@@ -38,11 +39,11 @@
 
 <H3>Tailwind CSS</H3>
 
-<HighlightCompo codeLang="ts" code={modules['./md/tailwind-css.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/tailwind-css.md'] as string} />
 
 <H3>Bootstrap</H3>
 
-<HighlightCompo codeLang="ts" code={modules['./md/bootstrap.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/bootstrap.md'] as string} />
 
 <H2>aria-label</H2>
 
@@ -52,18 +53,18 @@
 	> prop to modify the <Code>aria-label</Code> value.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/a11y.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/a11y.md'] as string} />
 
 <H2>Events</H2>
 
 <p>Use <Code>withEvents</Code> prop to use the following events:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/events.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/events.md'] as string} />
 
-<HighlightCompo codeLang="ts" code={modules['./md/events-2.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/events-2.md'] as string} />
 
 <H2>Passing down other attributes</H2>
 
 <p>Since all icons have <Code>...$$restProps</Code>, you can pass other attibutes as well.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
+<HighlightCompo lang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
