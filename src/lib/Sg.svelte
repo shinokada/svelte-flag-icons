@@ -1,41 +1,64 @@
-<script lang='ts'>
-  import { getContext } from 'svelte';
-  import type { BaseProps, Props } from './types'
-  
-  const ctx: BaseProps = getContext('iconCtx') ?? {};
-  
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    title, 
-    desc,
-    focusable = 'false',
-    ariaLabel, 
-    ...restProps 
-  }: Props = $props();
+<script lang="ts">
+	import { getContext } from 'svelte';
+	import type { BaseProps, Props } from './types';
 
-  const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+	const ctx: BaseProps = getContext('iconCtx') ?? {};
+
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		title,
+		desc,
+		focusable = 'false',
+		ariaLabel,
+		...restProps
+	}: Props = $props();
+
+	const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  {focusable}
-  aria-label={title?.id ? undefined : ariaLabel}
-  aria-labelledby={title?.id || undefined}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 640 480"
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	{focusable}
+	aria-label={title?.id ? undefined : ariaLabel}
+	aria-labelledby={title?.id || undefined}
+	aria-describedby={hasDescription ? ariaDescribedby : undefined}
+	viewBox="0 0 640 480"
 >
-  {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
-  {/if}
-       <defs>     <clipPath id="sg-a">       <path fill-opacity=".7" d="M0 0h640v480H0z"/>     </clipPath>   </defs>   <g fill-rule="evenodd" clip-path="url(#sg-a)">     <path fill="#fff" d="M-20 0h720v480H-20z"/>     <path fill="#df0000" d="M-20 0h720v240H-20z"/>     <path fill="#fff" d="M146 40.2a84.4 84.4 0 0 0 .8 165.2 86 86 0 0 1-106.6-59 86 86 0 0 1 59-106c16-4.6 30.8-4.7 46.9-.2z"/>     <path fill="#fff" d="m133 110 4.9 15-13-9.2-12.8 9.4 4.7-15.2-12.8-9.3 15.9-.2 5-15 5 15h15.8zm17.5 52 5 15.1-13-9.2-12.9 9.3 4.8-15.1-12.8-9.4 15.9-.1 4.9-15.1 5 15h16zm58.5-.4 4.9 15.2-13-9.3-12.8 9.3 4.7-15.1-12.8-9.3 15.9-.2 5-15 5 15h15.8zm17.4-51.6 4.9 15.1-13-9.2-12.8 9.3 4.8-15.1-12.9-9.4 16-.1 4.8-15.1 5 15h16zm-46.3-34.3 5 15.2-13-9.3-12.9 9.4 4.8-15.2-12.8-9.4 15.8-.1 5-15.1 5 15h16z"/>   </g>  
+	{#if title?.id && title.title}
+		<title id={title.id}>{title.title}</title>
+	{/if}
+	{#if desc?.id && desc.desc}
+		<desc id={desc.id}>{desc.desc}</desc>
+	{/if}
+	<defs> <clipPath id="sg-a"> <path fill-opacity=".7" d="M0 0h640v480H0z" /> </clipPath> </defs>
+	<g fill-rule="evenodd" clip-path="url(#sg-a)">
+		<path fill="#fff" d="M-20 0h720v480H-20z" /> <path fill="#df0000" d="M-20 0h720v240H-20z" />
+		<path
+			fill="#fff"
+			d="M146 40.2a84.4 84.4 0 0 0 .8 165.2 86 86 0 0 1-106.6-59 86 86 0 0 1 59-106c16-4.6 30.8-4.7 46.9-.2z"
+		/>
+		<path
+			fill="#fff"
+			d="m133 110 4.9 15-13-9.2-12.8 9.4 4.7-15.2-12.8-9.3 15.9-.2 5-15 5 15h15.8zm17.5 52 5 15.1-13-9.2-12.9 9.3 4.8-15.1-12.8-9.4 15.9-.1 4.9-15.1 5 15h16zm58.5-.4 4.9 15.2-13-9.3-12.8 9.3 4.7-15.1-12.8-9.3 15.9-.2 5-15 5 15h15.8zm17.4-51.6 4.9 15.1-13-9.2-12.8 9.3 4.8-15.1-12.9-9.4 16-.1 4.8-15.1 5 15h16zm-46.3-34.3 5 15.2-13-9.3-12.9 9.4 4.8-15.2-12.8-9.4 15.8-.1 5-15.1 5 15h16z"
+		/>
+	</g>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-flag-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop title
+@prop desc
+@prop focusable = 'false'
+@prop ariaLabel
+@prop ...restProps
+-->
